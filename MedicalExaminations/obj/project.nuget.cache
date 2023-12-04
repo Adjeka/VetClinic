@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "yx/r85drmSPu9/glSwcTM1vlOY+EiZY3855+ufukVRPu+YtfqZHr20z6R66zxUXB7PLyTsIgMNvqErfwXqk3DQ==",
+  "dgSpecHash": "Qcm/sos/SM9Z7ad27cLjkdeIj192zj3XESf22D6z44Yh6rzVXsO4GIjOCUExpgDq5RsCfDHeOMuj2YJyAtDfiQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinic\\MedicalExaminations\\MedicalExaminations.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Gemeni\\.nuget\\packages\\dapper\\2.1.24\\dapper.2.1.24.nupkg.sha512",
+    "C:\\Users\\Gemeni\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Gemeni\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Gemeni\\.nuget\\packages\\npgsql\\8.0.0\\npgsql.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
