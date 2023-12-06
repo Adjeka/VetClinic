@@ -8,7 +8,7 @@ CREATE TABLE Locations
 CREATE TABLE AnimalCategories
 (
 	id SERIAL PRIMARY KEY, 
-	name VARCHAR(20) NOT NULL
+	name VARCHAR(50) NOT NULL
 );
 
 
@@ -23,8 +23,8 @@ CREATE TABLE Animals
 	chip_number INT NOT NULL, 
 	nickname VARCHAR(100) NOT NULL, 
 	distinguishing_marks TEXT,
-	FOREIGN KEY (id_location) REFERENCES Location(id) ON DELETE CASCADE,
-	FOREIGN KEY (id_category) REFERENCES AnimalCategory(id) ON DELETE CASCADE,
+	FOREIGN KEY (id_location) REFERENCES Locations(id) ON DELETE CASCADE,
+	FOREIGN KEY (id_category) REFERENCES AnimalCategories(id) ON DELETE CASCADE,
 	UNIQUE(registration_number, chip_number)
 );
 
@@ -34,7 +34,7 @@ CREATE TABLE AnimalPhotos
 	id SERIAL PRIMARY KEY, 
 	id_animal INT NOT NULL, 
 	file_path VARCHAR(500) NOT NULL,
-	FOREIGN KEY (id_animal) REFERENCES Animal(id) ON DELETE CASCADE
+	FOREIGN KEY (id_animal) REFERENCES Animals(id) ON DELETE CASCADE
 );
 
 
@@ -50,7 +50,7 @@ CREATE TABLE AnimalOwnerSigns
 	id SERIAL PRIMARY KEY, 
 	id_animal INT NOT NULL, 
 	id_owner_sign INT NOT NULL,
-	FOREIGN KEY (id_animal) REFERENCES Animal(id) ON DELETE CASCADE,
+	FOREIGN KEY (id_animal) REFERENCES Animals(id) ON DELETE CASCADE,
 	FOREIGN KEY (id_owner_sign) REFERENCES OwnerSigns(id) ON DELETE CASCADE
 );
 
@@ -83,9 +83,9 @@ CREATE TABLE Organizations
 	id_organization_type INT,
 	id_organization_attribute INT,
 	id_location INT,
-	FOREIGN KEY (id_organization_type) REFERENCES Organization_type (id) ON DELETE SET NULL,
-	FOREIGN KEY (id_organization_attribute) REFERENCES Organization_attribute (id) ON DELETE SET NULL,
-	FOREIGN KEY (id_location) REFERENCES Location (id) ON DELETE SET NULL,
+	FOREIGN KEY (id_organization_type) REFERENCES OrganizationTypes (id) ON DELETE SET NULL,
+	FOREIGN KEY (id_organization_attribute) REFERENCES OrganizationAttributes (id) ON DELETE SET NULL,
+	FOREIGN KEY (id_location) REFERENCES Locations (id) ON DELETE SET NULL,
 	UNIQUE(INN, KPP)
 );
 
@@ -93,12 +93,12 @@ CREATE TABLE Contracts
 (
 	id SERIAL PRIMARY KEY, 
 	number INT NOT NULL,
-	signing_date DATE NOT NULL DEFAULT NOW(),
+	signing_date DATE DEFAULT NOW(),
 	valid_until DATE NOT NULL,
 	id_client INT,
 	id_executor INT,
-	FOREIGN KEY (id_client) REFERENCES Organization (id) ON DELETE SET NULL,
-	FOREIGN KEY (id_executor) REFERENCES Organization (id) ON DELETE SET NULL,
+	FOREIGN KEY (id_client) REFERENCES Organizations (id) ON DELETE SET NULL,
+	FOREIGN KEY (id_executor) REFERENCES Organizations (id) ON DELETE SET NULL,
 	UNIQUE(number)
 );
 
@@ -112,7 +112,7 @@ CREATE TABLE MedicalExaminations
 	skin_covers VARCHAR(200) NOT NULL, 
 	wool_condition VARCHAR(200) NOT NULL, 
 	injuries VARCHAR(200), 
-	emergency_help_required BIT NOT NULL, 
+	emergency_help_required BOOL NOT NULL, 
 	diagnosis VARCHAR(200) NOT NULL, 
 	actions_taken VARCHAR(300), 
 	treatment_prescribed VARCHAR(300) NOT NULL, 
@@ -121,9 +121,9 @@ CREATE TABLE MedicalExaminations
 	veterinarian_position VARCHAR(50) NOT NULL, 
 	id_vet_clinic INT NOT NULL, 
 	id_municipal_contract INT NOT NULL, 
-	FOREIGN KEY (id_animal) REFERENCES Animal(id) ON DELETE CASCADE,
-	FOREIGN KEY (id_vet_clinic) REFERENCES Organization(id) ON DELETE CASCADE,
-	FOREIGN KEY (id_municipal_contract) REFERENCES Contract(id) ON DELETE CASCADE
+	FOREIGN KEY (id_animal) REFERENCES Animals(id) ON DELETE CASCADE,
+	FOREIGN KEY (id_vet_clinic) REFERENCES Organizations(id) ON DELETE CASCADE,
+	FOREIGN KEY (id_municipal_contract) REFERENCES Contracts(id) ON DELETE CASCADE
 );
 
 CREATE TABLE ContractLocations 
@@ -131,8 +131,8 @@ CREATE TABLE ContractLocations
 	id SERIAL PRIMARY KEY, 
 	id_location INT NOT NULL,
 	id_contract INT NOT NULL,
-	FOREIGN KEY (id_location) REFERENCES Location (id) ON DELETE CASCADE,
-	FOREIGN KEY (id_contract) REFERENCES Contract (id) ON DELETE CASCADE
+	FOREIGN KEY (id_location) REFERENCES Locations (id) ON DELETE CASCADE,
+	FOREIGN KEY (id_contract) REFERENCES Contracts (id) ON DELETE CASCADE
 );
 
 
@@ -145,7 +145,7 @@ CREATE TABLE PermissionManagers (
 
 CREATE TABLE UserRoles (
 	id SERIAL PRIMARY KEY,
-	name VARCHAR(50), 
+	name VARCHAR(50) NOT NULL, 
 	UNIQUE(name)
 );
 
@@ -161,7 +161,7 @@ CREATE TABLE Users
 	id_permission_manager INT NOT NULL,
 	id_workplace INT,
 	FOREIGN KEY (id_role) REFERENCES UserRoles (id) ON DELETE CASCADE,
-	FOREIGN KEY (id_permission_manger) REFERENCES PermissionManagers (id)  ON DELETE CASCADE, 
-	FOREIGN KEY (id_workplace) REFERENCES Organization (id)  ON DELETE SET NULL,
+	FOREIGN KEY (id_permission_manager) REFERENCES PermissionManagers (id)  ON DELETE CASCADE, 
+	FOREIGN KEY (id_workplace) REFERENCES Organizations (id)  ON DELETE SET NULL,
 	UNIQUE(login)
 );
