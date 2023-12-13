@@ -6,8 +6,8 @@
     <title>@ViewData["Title"] - MedicalExaminations</title>
 </head>
 <body>
-    @RenderBody()
     @RenderSection("style", required: false)
+    @RenderBody()
 
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
