@@ -4,21 +4,16 @@ using System.Diagnostics;
 
 namespace MedicalExaminations.Controllers
 {
-    public class HomeController : Controller
+    public class AutorizationController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<AutorizationController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public AutorizationController(ILogger<AutorizationController> logger)
         {
             _logger = logger;
         }
 
         public IActionResult Index()
-        {
-            return View();
-        }
-
-        public IActionResult Privacy()
         {
             return View();
         }

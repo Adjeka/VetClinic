@@ -5,12 +5,72 @@
       "PackagePath": "staticwebassets\\MedicalExaminations.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinic\\MedicalExaminations\\wwwroot\\css\\site.css",
-      "PackagePath": "staticwebassets\\css\\site.css"
+      "Id": "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinic\\MedicalExaminations\\wwwroot\\css\\autorization.css",
+      "PackagePath": "staticwebassets\\css\\autorization.css"
+    },
+    {
+      "Id": "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinic\\MedicalExaminations\\wwwroot\\css\\fonts.css",
+      "PackagePath": "staticwebassets\\css\\fonts.css"
+    },
+    {
+      "Id": "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinic\\MedicalExaminations\\wwwroot\\css\\mainform.css",
+      "PackagePath": "staticwebassets\\css\\mainform.css"
+    },
+    {
+      "Id": "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinic\\MedicalExaminations\\wwwroot\\css\\registry.css",
+      "PackagePath": "staticwebassets\\css\\registry.css"
     },
     {
       "Id": "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinic\\MedicalExaminations\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinic\\MedicalExaminations\\wwwroot\\fonts\\Inter-Bold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Inter-Bold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinic\\MedicalExaminations\\wwwroot\\fonts\\Inter-Bold.woff2",
+      "PackagePath": "staticwebassets\\fonts\\Inter-Bold.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinic\\MedicalExaminations\\wwwroot\\fonts\\Inter-Medium.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Inter-Medium.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinic\\MedicalExaminations\\wwwroot\\fonts\\Inter-Medium.woff2",
+      "PackagePath": "staticwebassets\\fonts\\Inter-Medium.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinic\\MedicalExaminations\\wwwroot\\fonts\\Inter-Regular.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Inter-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinic\\MedicalExaminations\\wwwroot\\fonts\\Inter-Regular.woff2",
+      "PackagePath": "staticwebassets\\fonts\\Inter-Regular.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinic\\MedicalExaminations\\wwwroot\\img\\background.png",
+      "PackagePath": "staticwebassets\\img\\background.png"
+    },
+    {
+      "Id": "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinic\\MedicalExaminations\\wwwroot\\img\\exit.png",
+      "PackagePath": "staticwebassets\\img\\exit.png"
+    },
+    {
+      "Id": "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinic\\MedicalExaminations\\wwwroot\\img\\filter.png",
+      "PackagePath": "staticwebassets\\img\\filter.png"
+    },
+    {
+      "Id": "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinic\\MedicalExaminations\\wwwroot\\img\\home.png",
+      "PackagePath": "staticwebassets\\img\\home.png"
+    },
+    {
+      "Id": "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinic\\MedicalExaminations\\wwwroot\\img\\report.png",
+      "PackagePath": "staticwebassets\\img\\report.png"
+    },
+    {
+      "Id": "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinic\\MedicalExaminations\\wwwroot\\img\\sort.png",
+      "PackagePath": "staticwebassets\\img\\sort.png"
     },
     {
       "Id": "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinic\\MedicalExaminations\\wwwroot\\js\\site.js",

@@ -1,4 +1,13 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿function openCloseFilter() {
+    if (document.getElementById("openCloseFilter").style.display == "block")
+        document.getElementById("openCloseFilter").style.display = "none";
+    else
+        document.getElementById("openCloseFilter").style.display = "block";
+};
 
-// Write your JavaScript code.
+function openCloseSort() {
+    if (document.getElementById("openCloseSort").style.display == "block")
+        document.getElementById("openCloseSort").style.display = "none";
+    else
+        document.getElementById("openCloseSort").style.display = "block";
+};

@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Главная форма";
+}
+
+@section style {
+    <link rel="stylesheet" href="~/css/mainform.css" />
+}
+
+<div class="registries">
+    <h1>Список реестров</h1>
+    <div class="registries-buttons">
+        <button type="button" name="animals" onclick="location.href='/Animals/Index'">Животные</button>
+        <button type="button" name="organization" onclick="location.href='/Organizations/Index'">Организации</button>
+        <button type="button" name="contracts" onclick="location.href='/Contracts/Index'">Муниципальные контракты</button>
+    </div>
+    <button class="exit" type="button" name="exit" onclick="location.href='/Autorization/Index'">Выход</button>
+</div>

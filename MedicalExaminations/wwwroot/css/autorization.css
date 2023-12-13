@@ -1,0 +1,79 @@
+@import "fonts.css";
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url("../img/background.png") no-repeat;
+    background-color: #3B3355;
+    font-family: Inter, sans-serif;
+    line-height: 0.9;
+    overflow: hidden;
+}
+
+.autorization {
+    width: 490px;
+    height: 583px;
+    border-radius: 20px;
+    margin: 170px auto;
+    padding-top: 57px;
+    background-color: rgba(93, 93, 129, 0.5);
+}
+
+.autorization h1 {
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 29px;
+    color: white;
+    font-weight: 400;
+    font-size: 48px;
+}
+
+.autorization .log-in {
+    width: 400px;
+    height: 373px;
+    margin: auto;
+    padding: 27px 33px;
+}
+
+.autorization .log-in .inputs {
+    height: 292px;
+    display: flex;
+    flex-direction: column;
+}
+
+.autorization .log-in .inputs label {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+
+}
+
+.autorization .log-in .inputs label input {
+    width: 361px;
+    height: 32px;
+    padding: 9px 14px;
+    margin-top: 22px;
+    background-color: #5D5D81;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.autorization .log-in .log-in-button {
+    width: 400px;
+    height: 70px;
+    margin: 10px auto;
+    padding: 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 32px;
+    font-weight: 500;
+    color: #3B3355;
+}
+
+button {
+    cursor: pointer;
+}

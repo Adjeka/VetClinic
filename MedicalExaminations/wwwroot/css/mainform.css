@@ -1,0 +1,64 @@
+@import "fonts.css";
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url("../img/background.png") no-repeat;
+    background-color: #3B3355;
+    font-family: Inter, sans-serif;
+    line-height: 0.9;
+    overflow: hidden;
+}
+
+.registries {
+    width: 490px;
+    height: 583px;
+    border-radius: 20px;
+    margin: 170px auto;
+    padding-top: 57px;
+    background-color: rgba(93, 93, 129, 0.5);
+}
+
+.registries h1 {
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 29px;
+    color: white;
+    font-weight: 400;
+    font-size: 48px;
+}
+
+.registries .registries-buttons {
+    width: 400px;
+    height: 269px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.registries .registries-buttons button {
+    width: 400px;
+    height: 71px;
+    font-size: 32px;
+    font-weight: 500;
+    color: #3B3355;
+    border: none;
+    border-radius: 8px;
+}
+
+.registries .exit {
+    width: 400px;
+    height: 71px;
+    font-size: 32px;
+    font-weight: 500;
+    color: #3B3355;
+    border: none;
+    border-radius: 8px;
+    margin-top: 127px;
+    margin-left: 45px;
+}
+
+button {
+    cursor: pointer;
+}
