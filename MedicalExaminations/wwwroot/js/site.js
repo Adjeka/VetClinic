@@ -11,3 +11,4 @@ function openCloseSort() {
     else
         document.getElementById("openCloseSort").style.display = "block";
 };
+

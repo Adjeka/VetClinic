@@ -34,3 +34,39 @@ C:\Users\Gemeni\Documents\GitHub\VetClinic\MedicalExaminations\bin\Debug\net7.0\
 C:\Users\Gemeni\Documents\GitHub\VetClinic\MedicalExaminations\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\Gemeni\Documents\GitHub\VetClinic\MedicalExaminations\bin\Debug\net7.0\Npgsql.dll
 C:\Users\Gemeni\Documents\GitHub\VetClinic\MedicalExaminations\obj\Debug\net7.0\MedicalExaminations.csproj.CopyComplete
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\bin\Debug\net7.0\appsettings.Development.json
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\bin\Debug\net7.0\appsettings.json
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\bin\Debug\net7.0\MedicalExaminations.staticwebassets.runtime.json
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\bin\Debug\net7.0\MedicalExaminations.exe
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\bin\Debug\net7.0\MedicalExaminations.deps.json
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\bin\Debug\net7.0\MedicalExaminations.runtimeconfig.json
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\bin\Debug\net7.0\MedicalExaminations.dll
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\bin\Debug\net7.0\MedicalExaminations.pdb
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\bin\Debug\net7.0\Dapper.dll
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\bin\Debug\net7.0\Npgsql.dll
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\obj\Debug\net7.0\MedicalExaminations.csproj.AssemblyReference.cache
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\obj\Debug\net7.0\MedicalExaminations.GeneratedMSBuildEditorConfig.editorconfig
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\obj\Debug\net7.0\MedicalExaminations.AssemblyInfoInputs.cache
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\obj\Debug\net7.0\MedicalExaminations.AssemblyInfo.cs
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\obj\Debug\net7.0\MedicalExaminations.csproj.CoreCompileInputs.cache
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\obj\Debug\net7.0\MedicalExaminations.MvcApplicationPartsAssemblyInfo.cache
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\obj\Debug\net7.0\MedicalExaminations.RazorAssemblyInfo.cache
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\obj\Debug\net7.0\MedicalExaminations.RazorAssemblyInfo.cs
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\obj\Debug\net7.0\staticwebassets\msbuild.MedicalExaminations.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\obj\Debug\net7.0\staticwebassets\msbuild.build.MedicalExaminations.props
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.MedicalExaminations.props
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.MedicalExaminations.props
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\obj\Debug\net7.0\staticwebassets.pack.json
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\obj\Debug\net7.0\staticwebassets.build.json
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\obj\Debug\net7.0\staticwebassets.development.json
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\obj\Debug\net7.0\scopedcss\bundle\MedicalExaminations.styles.css
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\obj\Debug\net7.0\scopedcss\projectbundle\MedicalExaminations.bundle.scp.css
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\obj\Debug\net7.0\MedicalExaminations.csproj.CopyComplete
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\obj\Debug\net7.0\MedicalExaminations.dll
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\obj\Debug\net7.0\refint\MedicalExaminations.dll
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\obj\Debug\net7.0\MedicalExaminations.pdb
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\obj\Debug\net7.0\MedicalExaminations.genruntimeconfig.cache
+D:\Учеба\ПИС 2\VetClinic2\VetClinic\MedicalExaminations\obj\Debug\net7.0\ref\MedicalExaminations.dll

@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Qcm/sos/SM9Z7ad27cLjkdeIj192zj3XESf22D6z44Yh6rzVXsO4GIjOCUExpgDq5RsCfDHeOMuj2YJyAtDfiQ==",
+  "dgSpecHash": "wZL4usi8u8piWH0gTOc1Tap//9R527zWX1rnuY2UH6LJOxbBWsWyc+IISfGG9cC+YiRv2gj+6d78iNnYdvsWsQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinic\\MedicalExaminations\\MedicalExaminations.csproj",
+  "projectFilePath": "D:\\Учеба\\ПИС 2\\VetClinic2\\VetClinic\\MedicalExaminations\\MedicalExaminations.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Gemeni\\.nuget\\packages\\dapper\\2.1.24\\dapper.2.1.24.nupkg.sha512",
-    "C:\\Users\\Gemeni\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
-    "C:\\Users\\Gemeni\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
-    "C:\\Users\\Gemeni\\.nuget\\packages\\npgsql\\8.0.0\\npgsql.8.0.0.nupkg.sha512"
+    "C:\\Users\\Huawei\\.nuget\\packages\\dapper\\2.1.24\\dapper.2.1.24.nupkg.sha512",
+    "C:\\Users\\Huawei\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Huawei\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Huawei\\.nuget\\packages\\npgsql\\8.0.0\\npgsql.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }

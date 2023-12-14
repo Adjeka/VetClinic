@@ -8,18 +8,25 @@
 body {
     margin: 0;
     padding: 0;
-    background: url("../img/background.png") no-repeat;
-    background-size: 1150px;
-    background-position: 0 40px;
+    /*background: url("../img/background.png") no-repeat;
+    background-size: 65%;
+    background-position: 0 2rem;*/
     background-color: #3B3355;
     overflow: hidden;
+}
+
+img {
+    position: absolute;
+    z-index: -1;
+    width: 65%;
+    margin: calc((100vh - 50%)/2) 0; 
 }
 
 .registries {
     width: 490px;
     height: 583px;
     border-radius: 20px;
-    margin: 170px auto;
+    margin: calc((100vh - 640px)/2) auto;
     padding-top: 57px;
     background-color: rgba(93, 93, 129, 0.5);
 }
@@ -30,7 +37,7 @@ body {
     margin-bottom: 29px;
     color: white;
     font-weight: 400;
-    font-size: 48px;
+    font-size: 3rem;
 }
 
 .registries .registries-buttons {
@@ -45,8 +52,6 @@ body {
 .registries .registries-buttons button {
     width: 400px;
     height: 71px;
-    font-size: 32px;
-    font-weight: 500;
     color: #3B3355;
     border: none;
     border-radius: 8px;
@@ -55,8 +60,6 @@ body {
 .registries .exit {
     width: 400px;
     height: 71px;
-    font-size: 32px;
-    font-weight: 500;
     color: #3B3355;
     border: none;
     border-radius: 8px;
@@ -66,4 +69,6 @@ body {
 
 button {
     cursor: pointer;
+    font-size: 2rem;
+    font-weight: 500;
 }
