@@ -7,10 +7,7 @@
 
 body {
     margin: 0;
-    padding: 0;
-    /*background: url("../img/background.png") no-repeat;
-    background-size: 65%;
-    background-position: 0 2rem;*/
+    padding: 1px;
     background-color: #3B3355;
     overflow: hidden;
 }
@@ -18,23 +15,22 @@ body {
 img {
     position: absolute;
     z-index: -1;
-    width: 65%;
-    margin: calc((100vh - 50%)/2) 0; 
+    height: 95%;
+    margin: calc((100% - 95%)/2) 0;
 }
 
 .registries {
     width: 490px;
-    height: 583px;
+    height: 640px;
     border-radius: 20px;
     margin: calc((100vh - 640px)/2) auto;
-    padding-top: 57px;
+    padding: 1px;
     background-color: rgba(93, 93, 129, 0.5);
 }
 
 .registries h1 {
     width: fit-content;
-    margin: auto;
-    margin-bottom: 29px;
+    margin: 57px auto 29px auto;
     color: white;
     font-weight: 400;
     font-size: 3rem;
