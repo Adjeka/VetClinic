@@ -23,8 +23,12 @@ _UpgradeReport_Files/
 # Directories #
 ###############
 bin/
+obj/
+.vs/
 MedicalExaminations/obj/
 MedicalExaminations/.vs/
+/MedicalExaminations/obj/
+/MedicalExaminations/.vs/
 TestResults/
 ###################
 # Web publish log #
