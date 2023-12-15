@@ -25,6 +25,10 @@ _UpgradeReport_Files/
 bin/
 obj/
 .vs/
+MedicalExaminations/.vs/
+MedicalExaminations/bin/
+MedicalExaminations/obj/
+**/bin/
 **/obj/
 **/.vs/
 TestResults/
