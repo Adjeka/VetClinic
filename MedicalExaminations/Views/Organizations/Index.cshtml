@@ -1,6 +1,120 @@
-﻿@{
-    ViewData["Title"] = "OrganizationsRegistry";
+﻿@model IEnumerable<MedicalExaminations.Models.Organization>
+
+@{
+    ViewData["Title"] = "Реестр организаций";
 }
 
-<div>
+@section style {
+    <link rel="stylesheet" href="~/css/registry.css" />
+}
+
+<nav>
+    <a href="/Mainform/Index"><img src="/img/home.png" alt="home"></a>
+    <a href="#"><img src="/img/report.png" alt="report"></a>
+    <div class="registries"><a href="#">Реестры</a></div>
+    <a href="/Autorization/Index"><img src="/img/exit.png" alt="exit"></a>
+</nav>
+<h1>Реестр организаций</h1>
+<div class="content">
+    <div class="table">
+        <table>
+            <tr>
+                <th>Наименование</th>
+                <th>ИНН</th>
+                <th>КПП</th>
+                <th>Адрес регистрации</th>
+                <th>Тип организации</th>
+                <th>ИП/Юридическое лицо</th>
+                <th>Населённый пункт</th>
+            </tr>
+            @foreach (var organization in Model)
+            {
+                <tr>
+                    <td>@organization.Name</td>
+                    <td>@organization.INN</td>
+                    <td>@organization.KPP</td>
+                    <td>@organization.City, @organization.Street, @organization.HouseNumber</td>
+                    <td>@organization.OrganizationType?.Name</td>
+                    <td>@organization.OrganizationAttribute?.Name</td>
+                    <td>@organization.Location?.Name</td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="edit">
+        <div class="buttons">
+            <a asp-action="Create"><input type="button" value="Добавить" /></a>
+            <a asp-action="Delete"><input type="button" value="Удалить" /></a>
+            <a asp-action="Export"><input type="button" value="Экспорт" /></a>
+        </div>
+        <div class="filtering">
+            <div class="label">
+                <img src="/img/filter.png" alt="filter" onclick="openCloseFilter()">
+                <h2>Фильтрация</h2>
+            </div>
+            <div class="fields" id="openCloseFilter">
+                <form name="filtering" action="" method="post">
+                    <label>
+                        Поле
+                        <select id="fields-for-filtering">
+                            <option value="registrationNumber">Регистрационный номер</option>
+                            <option value="idLocation">Населённый пункт</option>
+                            <option value="idCategory">Категория животного</option>
+                            <option value="sex">Пол животного</option>
+                            <option value="birthYear">Год рождения</option>
+                            <option value="chipNumber">Номер электронного чипа</option>
+                            <option value="nickname">Кличка животного</option>
+                            <option value="distinguishingMarks">Фотографии</option>
+                            <option value="distinguishingMarks">Особые приметы</option>
+                            <option value="ownerSigns">Наличие признаков владельца</option>
+                        </select>
+                    </label>
+                    <label>
+                        Значение
+                        <input type="text" name="value" required>
+                    </label>
+                    <div class="form-buttons">
+                        <button type="submit" name="add-filter">Добивить фильтр</button>
+                        <button type="reset" name="clear-filter">Очистить фильтры</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="sorting">
+            <div class="label">
+                <img src="/img/sort.png" alt="sort" onclick="openCloseSort()">
+                <h2>Сортировка</h2>
+            </div>
+            <div class="fields" id="openCloseSort">
+                <form name="sorting" action="" method="post">
+                    <label>
+                        Поле
+                        <select id="fields-for-sorting">
+                            <option value="registrationNumber">Регистрационный номер</option>
+                            <option value="idLocation">Населённый пункт</option>
+                            <option value="idCategory">Категория животного</option>
+                            <option value="sex">Пол животного</option>
+                            <option value="birthYear">Год рождения</option>
+                            <option value="chipNumber">Номер электронного чипа</option>
+                            <option value="nickname">Кличка животного</option>
+                            <option value="distinguishingMarks">Фотографии</option>
+                            <option value="distinguishingMarks">Особые приметы</option>
+                            <option value="ownerSigns">Наличие признаков владельца</option>
+                        </select>
+                    </label>
+                    <label>
+                        Сортировать по
+                        <select id="type-of-sorting">
+                            <option value="asc">По возрастанию</option>
+                            <option value="desc">По убыванию</option>
+                        </select>
+                    </label>
+                    <div class="form-buttons">
+                        <button type="submit" name="add-sort">Добавить сортировку</button>
+                        <button type="reset" name="clear-sort">Очистить сортировку</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>

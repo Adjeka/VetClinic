@@ -1,0 +1,44 @@
+﻿@model MedicalExaminations.Models.Organization
+
+<h2>Добавление пользователя</h2>
+<form asp-action="create" asp-controller="Organizations">
+    <p>
+        <label asp-for="Name">Наименование</label><br />
+        <input type="text" asp-for="Name" />
+    </p>
+    <p>
+        <label asp-for="INN">ИНН</label><br />
+        <input type="number" asp-for="INN" />
+    </p>
+    <p>
+        <label asp-for="KPP">КПП</label><br />
+        <input type="number" asp-for="KPP" />
+    </p>
+    <p>
+        <label asp-for="City">Город</label><br />
+        <input type="text" asp-for="City" />
+    </p>
+    <p>
+        <label asp-for="Street">Улица</label><br />
+        <input type="text" asp-for="Street" />
+    </p>
+    <p>
+        <label asp-for="HouseNumber">Дом</label><br />
+        <input type="number" asp-for="HouseNumber" />
+    </p>
+    <p>
+        <label asp-for="OrganizationTypeId">Тип организации</label><br />
+        <input type="number" asp-for="OrganizationTypeId" />
+    </p>
+    <p>
+        <label asp-for="OrganizationAttributeId">Признак организации</label><br />
+        <input type="number" asp-for="OrganizationAttributeId" />
+    </p>
+    <p>
+        <label asp-for="LocationId">Населенный пункт</label><br />
+        <input type="number" asp-for="LocationId" />
+    </p>
+    <p>
+        <input type="submit" value="Отправить" />
+    </p>
+</form>

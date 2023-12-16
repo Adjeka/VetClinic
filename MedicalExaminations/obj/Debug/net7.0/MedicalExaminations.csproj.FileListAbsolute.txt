@@ -106,3 +106,47 @@ D:\Учеба\ПИС 2\VetClinic\MedicalExaminations\obj\Debug\net7.0\refint\Med
 D:\Учеба\ПИС 2\VetClinic\MedicalExaminations\obj\Debug\net7.0\MedicalExaminations.pdb
 D:\Учеба\ПИС 2\VetClinic\MedicalExaminations\obj\Debug\net7.0\MedicalExaminations.genruntimeconfig.cache
 D:\Учеба\ПИС 2\VetClinic\MedicalExaminations\obj\Debug\net7.0\ref\MedicalExaminations.dll
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\bin\Debug\net7.0\appsettings.json
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\bin\Debug\net7.0\MedicalExaminations.staticwebassets.runtime.json
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\bin\Debug\net7.0\MedicalExaminations.exe
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\bin\Debug\net7.0\MedicalExaminations.deps.json
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\bin\Debug\net7.0\MedicalExaminations.runtimeconfig.json
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\bin\Debug\net7.0\MedicalExaminations.dll
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\bin\Debug\net7.0\MedicalExaminations.pdb
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\bin\Debug\net7.0\Npgsql.dll
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\obj\Debug\net7.0\MedicalExaminations.csproj.AssemblyReference.cache
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\obj\Debug\net7.0\MedicalExaminations.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\obj\Debug\net7.0\MedicalExaminations.AssemblyInfoInputs.cache
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\obj\Debug\net7.0\MedicalExaminations.AssemblyInfo.cs
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\obj\Debug\net7.0\MedicalExaminations.csproj.CoreCompileInputs.cache
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\obj\Debug\net7.0\MedicalExaminations.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\obj\Debug\net7.0\MedicalExaminations.RazorAssemblyInfo.cache
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\obj\Debug\net7.0\MedicalExaminations.RazorAssemblyInfo.cs
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\obj\Debug\net7.0\staticwebassets\msbuild.MedicalExaminations.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\obj\Debug\net7.0\staticwebassets\msbuild.build.MedicalExaminations.props
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.MedicalExaminations.props
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.MedicalExaminations.props
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\obj\Debug\net7.0\scopedcss\bundle\MedicalExaminations.styles.css
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\obj\Debug\net7.0\scopedcss\projectbundle\MedicalExaminations.bundle.scp.css
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\obj\Debug\net7.0\MedicalExaminations.csproj.CopyComplete
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\obj\Debug\net7.0\MedicalExaminations.dll
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\obj\Debug\net7.0\refint\MedicalExaminations.dll
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\obj\Debug\net7.0\MedicalExaminations.pdb
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\obj\Debug\net7.0\MedicalExaminations.genruntimeconfig.cache
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\obj\Debug\net7.0\ref\MedicalExaminations.dll
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\bin\Debug\net7.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\bin\Debug\net7.0\Humanizer.dll
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\bin\Debug\net7.0\Npgsql.EntityFrameworkCore.PostgreSQL.Design.dll
+C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\bin\Debug\net7.0\System.CodeDom.dll
