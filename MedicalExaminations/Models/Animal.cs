@@ -7,10 +7,10 @@ namespace MedicalExaminations.Models
         [Key]
         public int Id { get; set; }
         public int RegistrationNumber { get; set; }
-        public int IdLocation { get; set; }
-        public virtual Location Location { get; set; }
-        public int IdCategory { get; set; }
-        public virtual AnimalCategory AnimalCategory { get; set; }
+        public int LocationId { get; set; }
+        public Location? Location { get; set; }
+        public int CategoryId { get; set; }
+        public AnimalCategory? AnimalCategory { get; set; }
         public char sex { get; set; }
         public int BirthYear { get; set; }
         public int ChipNumber { get; set; }

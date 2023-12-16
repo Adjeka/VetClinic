@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MedicalExaminations.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace MedicalExaminations.Controllers
 {

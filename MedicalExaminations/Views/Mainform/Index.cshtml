@@ -12,8 +12,8 @@
     <h1>Список реестров</h1>
     <div class="registries-buttons">
         <a asp-action="Index" asp-controller="Animals"><input type="button" value="Животные" /></a>
-        <a><input type="button" value="Организации" /></a>
-        <a><input type="button" value="Муниципальные контракты" /></a>
+        <a asp-action="Index" asp-controller="Organizations"><input type="button" value="Организации" /></a>
+        <a asp-action="Index" asp-controller="Contracts"><input type="button" value="Муниципальные контракты" /></a>
     </div>
-    <a><input class="exit" type="button" value="Выход" /></a>
+    <a asp-action="Index" asp-controller="Autorization"><input class="exit" type="button" value="Выход" /></a>
 </div>
