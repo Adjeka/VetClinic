@@ -6,8 +6,7 @@ namespace MedicalExaminations.Models
     {
         [Key]
         public int Id { get; set; }
-        public string Mame { get; set; }
-        public int ExaminationCost { get; set; }
+        public string Name { get; set; }
 
         public List<Organization> Organizations { get; set; }
         public List<Contract> Contracts { get; set; }

@@ -9,10 +9,10 @@ namespace MedicalExaminations.Models
         public int Number { get; set; }
         public DateTime SigningDate { get; set; }
         public DateTime ValidUntil { get; set; }
-        public int? IdClient { get; set; }
-        public virtual Organization Client { get; set; }
-        public int? IdExecutor { get; set; }
-        public virtual Organization Executor { get; set; }
+        public int ClientId { get; set; }
+        public Organization? Client { get; set; }
+        public int ExecutorId { get; set; }
+        public Organization? Executor { get; set; }
 
         public List<Location> Locations { get; set; }
         public List<MedicalExamination> MedicalExaminations { get; set; }
