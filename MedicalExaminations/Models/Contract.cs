@@ -14,7 +14,8 @@ namespace MedicalExaminations.Models
         public int ExecutorId { get; set; }
         public Organization? Executor { get; set; }
 
-        public List<Location> Locations { get; set; }
+        //public List<Location> Locations { get; set; }
+        public List<ContractLocation> ContractLocations { get; set; }
         public List<MedicalExamination> MedicalExaminations { get; set; }
     }
 }

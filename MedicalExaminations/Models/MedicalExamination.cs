@@ -22,8 +22,8 @@ namespace MedicalExaminations.Models
         public string VeterinarianFullName { get; set; }
         public string VeterinarianPosition { get; set; }
         public int VetClinicId { get; set; }
-        public Organization? Organization { get; set; }
-        public int MunicipalContractId { get; set; }
+        public Organization? VetClinic { get; set; }
+        public int ContractId { get; set; }
         public Contract? Contract { get; set; }
     }
 }

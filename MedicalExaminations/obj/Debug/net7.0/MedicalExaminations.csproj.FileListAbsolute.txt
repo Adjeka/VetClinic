@@ -78,9 +78,6 @@ D:\Учеба\ПИС 2\VetClinic\MedicalExaminations\bin\Debug\net7.0\MedicalExa
 D:\Учеба\ПИС 2\VetClinic\MedicalExaminations\bin\Debug\net7.0\MedicalExaminations.runtimeconfig.json
 D:\Учеба\ПИС 2\VetClinic\MedicalExaminations\bin\Debug\net7.0\MedicalExaminations.dll
 D:\Учеба\ПИС 2\VetClinic\MedicalExaminations\bin\Debug\net7.0\MedicalExaminations.pdb
-D:\Учеба\ПИС 2\VetClinic\MedicalExaminations\bin\Debug\net7.0\Dapper.dll
-D:\Учеба\ПИС 2\VetClinic\MedicalExaminations\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-D:\Учеба\ПИС 2\VetClinic\MedicalExaminations\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
 D:\Учеба\ПИС 2\VetClinic\MedicalExaminations\bin\Debug\net7.0\Npgsql.dll
 D:\Учеба\ПИС 2\VetClinic\MedicalExaminations\obj\Debug\net7.0\MedicalExaminations.csproj.AssemblyReference.cache
 D:\Учеба\ПИС 2\VetClinic\MedicalExaminations\obj\Debug\net7.0\MedicalExaminations.GeneratedMSBuildEditorConfig.editorconfig
@@ -150,3 +147,14 @@ C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\bin\Debug\net7.0
 C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\bin\Debug\net7.0\Mono.TextTemplating.dll
 C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\bin\Debug\net7.0\Npgsql.EntityFrameworkCore.PostgreSQL.Design.dll
 C:\Users\Gemeni\Documents\GitHub\VetClinic1\MedicalExaminations\bin\Debug\net7.0\System.CodeDom.dll
+D:\Учеба\ПИС 2\VetClinic\MedicalExaminations\bin\Debug\net7.0\Humanizer.dll
+D:\Учеба\ПИС 2\VetClinic\MedicalExaminations\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+D:\Учеба\ПИС 2\VetClinic\MedicalExaminations\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Учеба\ПИС 2\VetClinic\MedicalExaminations\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Учеба\ПИС 2\VetClinic\MedicalExaminations\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Учеба\ПИС 2\VetClinic\MedicalExaminations\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
+D:\Учеба\ПИС 2\VetClinic\MedicalExaminations\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+D:\Учеба\ПИС 2\VetClinic\MedicalExaminations\bin\Debug\net7.0\Mono.TextTemplating.dll
+D:\Учеба\ПИС 2\VetClinic\MedicalExaminations\bin\Debug\net7.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+D:\Учеба\ПИС 2\VetClinic\MedicalExaminations\bin\Debug\net7.0\Npgsql.EntityFrameworkCore.PostgreSQL.Design.dll
+D:\Учеба\ПИС 2\VetClinic\MedicalExaminations\bin\Debug\net7.0\System.CodeDom.dll

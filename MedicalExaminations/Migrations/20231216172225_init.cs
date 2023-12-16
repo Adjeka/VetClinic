@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -7,7 +8,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MedicalExaminations.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialDatabase : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -18,11 +19,14 @@ namespace MedicalExaminations.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
-                    Name = table.Column<string>(type: "text", nullable: false)
+                    Name = table.Column<string>(type: "varchar(50)", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AnimalCategories", x => x.Id);
+                    table.UniqueConstraint(
+                        name: "Unique_AnimalCategories_Name",
+                        x => x.Name);
                 });
 
             migrationBuilder.CreateTable(
@@ -31,11 +35,14 @@ namespace MedicalExaminations.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
-                    Name = table.Column<string>(type: "text", nullable: false)
+                    Name = table.Column<string>(type: "varchar(50)", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Locations", x => x.Id);
+                    table.UniqueConstraint(
+                        name: "Unique_Locations_Name",
+                        x => x.Name);
                 });
 
             migrationBuilder.CreateTable(
@@ -44,11 +51,14 @@ namespace MedicalExaminations.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
-                    Name = table.Column<string>(type: "text", nullable: false)
+                    Name = table.Column<string>(type: "varchar(30)", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_OrganizationAttributes", x => x.Id);
+                    table.UniqueConstraint(
+                        name: "Unique_OrganizationAttributes_Name",
+                        x => x.Name);
                 });
 
             migrationBuilder.CreateTable(
@@ -57,11 +67,14 @@ namespace MedicalExaminations.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
-                    Name = table.Column<string>(type: "text", nullable: false)
+                    Name = table.Column<string>(type: "varchar(100)", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_OrganizationTypes", x => x.Id);
+                    table.UniqueConstraint(
+                        name: "Unique_OrganizationTypes_Name",
+                        x => x.Name);
                 });
 
             migrationBuilder.CreateTable(
@@ -70,11 +83,14 @@ namespace MedicalExaminations.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
-                    Name = table.Column<string>(type: "text", nullable: false)
+                    Name = table.Column<string>(type: "varchar(50)", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_OwnerSigns", x => x.Id);
+                    table.UniqueConstraint(
+                        name: "Unique_OwnerSigns_Name",
+                        x => x.Name);
                 });
 
             migrationBuilder.CreateTable(
@@ -83,11 +99,14 @@ namespace MedicalExaminations.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
-                    Name = table.Column<string>(type: "text", nullable: false)
+                    Name = table.Column<string>(type: "varchar(50)", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_PermissionManagers", x => x.Id);
+                    table.UniqueConstraint(
+                        name: "Unique_PermissionManagers_Name",
+                        x => x.Name);
                 });
 
             migrationBuilder.CreateTable(
@@ -96,11 +115,14 @@ namespace MedicalExaminations.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
-                    Name = table.Column<string>(type: "text", nullable: false)
+                    Name = table.Column<string>(type: "varchar(50)", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_UserRoles", x => x.Id);
+                    table.UniqueConstraint(
+                        name: "Unique_UserRoles_Name",
+                        x => x.Name);
                 });
 
             migrationBuilder.CreateTable(
@@ -112,11 +134,11 @@ namespace MedicalExaminations.Migrations
                     RegistrationNumber = table.Column<int>(type: "integer", nullable: false),
                     LocationId = table.Column<int>(type: "integer", nullable: false),
                     CategoryId = table.Column<int>(type: "integer", nullable: false),
-                    AnimalCategoryId = table.Column<int>(type: "integer", nullable: true),
-                    sex = table.Column<char>(type: "character(1)", nullable: false),
+                    AnimalCategoryId = table.Column<int>(type: "integer", nullable: false),
+                    Sex = table.Column<char>(type: "character(1)", nullable: false),
                     BirthYear = table.Column<int>(type: "integer", nullable: false),
                     ChipNumber = table.Column<int>(type: "integer", nullable: false),
-                    Nickname = table.Column<string>(type: "text", nullable: false),
+                    Nickname = table.Column<string>(type: "varchar(100)", nullable: false),
                     DistinguishingMarks = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
@@ -126,13 +148,20 @@ namespace MedicalExaminations.Migrations
                         name: "FK_Animals_AnimalCategories_AnimalCategoryId",
                         column: x => x.AnimalCategoryId,
                         principalTable: "AnimalCategories",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Animals_Locations_LocationId",
                         column: x => x.LocationId,
                         principalTable: "Locations",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                    table.UniqueConstraint(
+                        name: "Unique_Animals_RegistrationNumber",
+                        x => x.RegistrationNumber);
+                    table.UniqueConstraint(
+                        name: "Unique_Animals_ChipNumber",
+                        x => x.ChipNumber);
                 });
 
             migrationBuilder.CreateTable(
@@ -141,15 +170,15 @@ namespace MedicalExaminations.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
-                    Name = table.Column<string>(type: "text", nullable: false),
-                    INN = table.Column<long>(type: "bigint", nullable: false),
-                    KPP = table.Column<long>(type: "bigint", nullable: false),
-                    City = table.Column<string>(type: "text", nullable: false),
-                    Street = table.Column<string>(type: "text", nullable: false),
+                    Name = table.Column<string>(type: "varchar(100)", nullable: false),
+                    INN = table.Column<long>(type: "numeric(12)", nullable: false),
+                    KPP = table.Column<long>(type: "numeric(9)", nullable: false),
+                    City = table.Column<string>(type: "varchar(40)", nullable: false),
+                    Street = table.Column<string>(type: "varchar(50)", nullable: false),
                     HouseNumber = table.Column<int>(type: "integer", nullable: false),
-                    OrganizationTypeId = table.Column<int>(type: "integer", nullable: false),
-                    OrganizationAttributeId = table.Column<int>(type: "integer", nullable: false),
-                    LocationId = table.Column<int>(type: "integer", nullable: false)
+                    OrganizationTypeId = table.Column<int>(type: "integer", nullable: true),
+                    OrganizationAttributeId = table.Column<int>(type: "integer", nullable: true),
+                    LocationId = table.Column<int>(type: "integer", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -159,19 +188,25 @@ namespace MedicalExaminations.Migrations
                         column: x => x.LocationId,
                         principalTable: "Locations",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.SetNull);
                     table.ForeignKey(
                         name: "FK_Organizations_OrganizationAttributes_OrganizationAttributeId",
                         column: x => x.OrganizationAttributeId,
                         principalTable: "OrganizationAttributes",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.SetNull);
                     table.ForeignKey(
                         name: "FK_Organizations_OrganizationTypes_OrganizationTypeId",
                         column: x => x.OrganizationTypeId,
                         principalTable: "OrganizationTypes",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.SetNull);
+                    table.UniqueConstraint(
+                        name: "Unique_Organizations_INN",
+                        x => x.INN);
+                    table.UniqueConstraint(
+                        name: "Unique_Organizations_KPP",
+                        x => x.KPP);
                 });
 
             migrationBuilder.CreateTable(
@@ -225,10 +260,10 @@ namespace MedicalExaminations.Migrations
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
                     Number = table.Column<int>(type: "integer", nullable: false),
-                    SigningDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    ValidUntil = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    ClientId = table.Column<int>(type: "integer", nullable: false),
-                    ExecutorId = table.Column<int>(type: "integer", nullable: false)
+                    SigningDate = table.Column<DateTime>(type: "date", nullable: false, defaultValueSql: "NOW()"),
+                    ValidUntil = table.Column<DateTime>(type: "date", nullable: false),
+                    ClientId = table.Column<int>(type: "integer", nullable: true),
+                    ExecutorId = table.Column<int>(type: "integer", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -238,13 +273,16 @@ namespace MedicalExaminations.Migrations
                         column: x => x.ClientId,
                         principalTable: "Organizations",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.SetNull);
                     table.ForeignKey(
                         name: "FK_Contracts_Organizations_ExecutorId",
                         column: x => x.ExecutorId,
                         principalTable: "Organizations",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.SetNull);
+                    table.UniqueConstraint(
+                        name: "Unique_Contracts_Number",
+                        x => x.Number);
                 });
 
             migrationBuilder.CreateTable(
@@ -253,22 +291,21 @@ namespace MedicalExaminations.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
-                    Name = table.Column<string>(type: "text", nullable: false),
-                    Surname = table.Column<string>(type: "text", nullable: false),
-                    Patronymic = table.Column<string>(type: "text", nullable: false),
+                    Name = table.Column<string>(type: "varchar(100)", nullable: false),
+                    Surname = table.Column<string>(type: "varchar(100)", nullable: false),
+                    Patronymic = table.Column<string>(type: "varchar(100)", nullable: false),
                     RoleId = table.Column<int>(type: "integer", nullable: false),
-                    Login = table.Column<string>(type: "text", nullable: false),
-                    Password = table.Column<string>(type: "text", nullable: false),
+                    Login = table.Column<string>(type: "varchar(100)", nullable: false),
+                    Password = table.Column<string>(type: "varchar(100)", nullable: false),
                     PermissionManagerId = table.Column<int>(type: "integer", nullable: false),
-                    WorkplaceId = table.Column<int>(type: "integer", nullable: false),
-                    OrganizationId = table.Column<int>(type: "integer", nullable: true)
+                    WorkplaceId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Users", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Users_Organizations_OrganizationId",
-                        column: x => x.OrganizationId,
+                        name: "FK_Users_Organizations_WorkplaceId",
+                        column: x => x.WorkplaceId,
                         principalTable: "Organizations",
                         principalColumn: "Id");
                     table.ForeignKey(
@@ -283,27 +320,33 @@ namespace MedicalExaminations.Migrations
                         principalTable: "UserRoles",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                    table.UniqueConstraint(
+                        name: "Unique_Users_Login",
+                        x => x.Login);
                 });
 
             migrationBuilder.CreateTable(
                 name: "ContractLocation",
                 columns: table => new
                 {
-                    ContractsId = table.Column<int>(type: "integer", nullable: false),
-                    LocationsId = table.Column<int>(type: "integer", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
+                    LocationId = table.Column<int>(type: "integer", nullable: false),
+                    ContractId = table.Column<int>(type: "integer", nullable: false),
+                    ExaminationCost = table.Column<int>(type: "money", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ContractLocation", x => new { x.ContractsId, x.LocationsId });
+                    table.PrimaryKey("PK_ContractLocation", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_ContractLocation_Contracts_ContractsId",
-                        column: x => x.ContractsId,
+                        name: "FK_ContractLocation_Contracts_ContractId",
+                        column: x => x.ContractId,
                         principalTable: "Contracts",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_ContractLocation_Locations_LocationsId",
-                        column: x => x.LocationsId,
+                        name: "FK_ContractLocation_Locations_LocationId",
+                        column: x => x.LocationId,
                         principalTable: "Locations",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -316,23 +359,21 @@ namespace MedicalExaminations.Migrations
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
                     AnimalId = table.Column<int>(type: "integer", nullable: false),
-                    BehaviourFeatures = table.Column<string>(type: "text", nullable: false),
-                    AnimalCondition = table.Column<string>(type: "text", nullable: false),
-                    BodyTemperature = table.Column<double>(type: "double precision", nullable: false),
-                    SkinCovers = table.Column<string>(type: "text", nullable: false),
-                    WoolCondition = table.Column<string>(type: "text", nullable: false),
-                    Injuries = table.Column<string>(type: "text", nullable: false),
+                    BehaviourFeatures = table.Column<string>(type: "varchar(200)", nullable: true),
+                    AnimalCondition = table.Column<string>(type: "varchar(200)", nullable: false),
+                    BodyTemperature = table.Column<double>(type: "real", nullable: false),
+                    SkinCovers = table.Column<string>(type: "varchar(200)", nullable: false),
+                    WoolCondition = table.Column<string>(type: "varchar(200)", nullable: false),
+                    Injuries = table.Column<string>(type: "varchar(200)", nullable: true),
                     EmergencyHelpRequired = table.Column<bool>(type: "boolean", nullable: false),
-                    Diagnosis = table.Column<string>(type: "text", nullable: false),
-                    ActionsTaken = table.Column<string>(type: "text", nullable: false),
-                    TreatmentPrescribed = table.Column<string>(type: "text", nullable: false),
-                    ExaminationDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    VeterinarianFullName = table.Column<string>(type: "text", nullable: false),
-                    VeterinarianPosition = table.Column<string>(type: "text", nullable: false),
+                    Diagnosis = table.Column<string>(type: "varchar(200)", nullable: false),
+                    ActionsTaken = table.Column<string>(type: "varchar(300)", nullable: true),
+                    TreatmentPrescribed = table.Column<string>(type: "varchar(300)", nullable: false),
+                    ExaminationDate = table.Column<DateTime>(type: "date", nullable: false, defaultValueSql : "NOW()"),
+                    VeterinarianFullName = table.Column<string>(type: "varchar(200)", nullable: false),
+                    VeterinarianPosition = table.Column<string>(type: "varchar(50)", nullable: false),
                     VetClinicId = table.Column<int>(type: "integer", nullable: false),
-                    OrganizationId = table.Column<int>(type: "integer", nullable: true),
-                    MunicipalContractId = table.Column<int>(type: "integer", nullable: false),
-                    ContractId = table.Column<int>(type: "integer", nullable: true)
+                    ContractId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -347,12 +388,14 @@ namespace MedicalExaminations.Migrations
                         name: "FK_MedicalExaminations_Contracts_ContractId",
                         column: x => x.ContractId,
                         principalTable: "Contracts",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_MedicalExaminations_Organizations_OrganizationId",
-                        column: x => x.OrganizationId,
+                        name: "FK_MedicalExaminations_Organizations_VetClinicId",
+                        column: x => x.VetClinicId,
                         principalTable: "Organizations",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
@@ -376,9 +419,14 @@ namespace MedicalExaminations.Migrations
                 column: "LocationId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ContractLocation_LocationsId",
+                name: "IX_ContractLocation_ContractId",
                 table: "ContractLocation",
-                column: "LocationsId");
+                column: "ContractId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ContractLocation_LocationId",
+                table: "ContractLocation",
+                column: "LocationId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Contracts_ClientId",
@@ -401,9 +449,9 @@ namespace MedicalExaminations.Migrations
                 column: "ContractId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_MedicalExaminations_OrganizationId",
+                name: "IX_MedicalExaminations_VetClinicId",
                 table: "MedicalExaminations",
-                column: "OrganizationId");
+                column: "VetClinicId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Organizations_LocationId",
@@ -421,11 +469,6 @@ namespace MedicalExaminations.Migrations
                 column: "OrganizationTypeId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Users_OrganizationId",
-                table: "Users",
-                column: "OrganizationId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Users_PermissionManagerId",
                 table: "Users",
                 column: "PermissionManagerId");
@@ -434,6 +477,11 @@ namespace MedicalExaminations.Migrations
                 name: "IX_Users_RoleId",
                 table: "Users",
                 column: "RoleId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Users_WorkplaceId",
+                table: "Users",
+                column: "WorkplaceId");
         }
 
         /// <inheritdoc />

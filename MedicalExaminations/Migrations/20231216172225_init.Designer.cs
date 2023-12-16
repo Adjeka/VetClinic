@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MedicalExaminations.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231216161448_InitialDatabase")]
-    partial class InitialDatabase
+    [Migration("20231216172225_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -40,21 +40,6 @@ namespace MedicalExaminations.Migrations
                     b.ToTable("AnimalOwnerSign");
                 });
 
-            modelBuilder.Entity("ContractLocation", b =>
-                {
-                    b.Property<int>("ContractsId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("LocationsId")
-                        .HasColumnType("integer");
-
-                    b.HasKey("ContractsId", "LocationsId");
-
-                    b.HasIndex("LocationsId");
-
-                    b.ToTable("ContractLocation");
-                });
-
             modelBuilder.Entity("MedicalExaminations.Models.Animal", b =>
                 {
                     b.Property<int>("Id")
@@ -63,7 +48,7 @@ namespace MedicalExaminations.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("AnimalCategoryId")
+                    b.Property<int>("AnimalCategoryId")
                         .HasColumnType("integer");
 
                     b.Property<int>("BirthYear")
@@ -88,7 +73,7 @@ namespace MedicalExaminations.Migrations
                     b.Property<int>("RegistrationNumber")
                         .HasColumnType("integer");
 
-                    b.Property<char>("sex")
+                    b.Property<char>("Sex")
                         .HasColumnType("character(1)");
 
                     b.HasKey("Id");
@@ -169,6 +154,32 @@ namespace MedicalExaminations.Migrations
                     b.HasIndex("ExecutorId");
 
                     b.ToTable("Contracts");
+                });
+
+            modelBuilder.Entity("MedicalExaminations.Models.ContractLocation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ContractId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("ExaminationCost")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("LocationId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ContractId");
+
+                    b.HasIndex("LocationId");
+
+                    b.ToTable("ContractLocation");
                 });
 
             modelBuilder.Entity("MedicalExaminations.Models.Location", b =>
@@ -292,17 +303,17 @@ namespace MedicalExaminations.Migrations
                     b.Property<long>("KPP")
                         .HasColumnType("bigint");
 
-                    b.Property<int>("LocationId")
+                    b.Property<int?>("LocationId")
                         .HasColumnType("integer");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("OrganizationAttributeId")
+                    b.Property<int?>("OrganizationAttributeId")
                         .HasColumnType("integer");
 
-                    b.Property<int>("OrganizationTypeId")
+                    b.Property<int?>("OrganizationTypeId")
                         .HasColumnType("integer");
 
                     b.Property<string>("Street")
@@ -404,9 +415,6 @@ namespace MedicalExaminations.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int?>("OrganizationId")
-                        .HasColumnType("integer");
-
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("text");
@@ -430,11 +438,11 @@ namespace MedicalExaminations.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("OrganizationId");
-
                     b.HasIndex("PermissionManagerId");
 
                     b.HasIndex("RoleId");
+
+                    b.HasIndex("WorkplaceId");
 
                     b.ToTable("Users");
                 });
@@ -471,26 +479,13 @@ namespace MedicalExaminations.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("ContractLocation", b =>
-                {
-                    b.HasOne("MedicalExaminations.Models.Contract", null)
-                        .WithMany()
-                        .HasForeignKey("ContractsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("MedicalExaminations.Models.Location", null)
-                        .WithMany()
-                        .HasForeignKey("LocationsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("MedicalExaminations.Models.Animal", b =>
                 {
                     b.HasOne("MedicalExaminations.Models.AnimalCategory", "AnimalCategory")
                         .WithMany("Animals")
-                        .HasForeignKey("AnimalCategoryId");
+                        .HasForeignKey("AnimalCategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("MedicalExaminations.Models.Location", "Location")
                         .WithMany("Animals")
@@ -533,6 +528,25 @@ namespace MedicalExaminations.Migrations
                     b.Navigation("Executor");
                 });
 
+            modelBuilder.Entity("MedicalExaminations.Models.ContractLocation", b =>
+                {
+                    b.HasOne("MedicalExaminations.Models.Contract", "Contract")
+                        .WithMany("ContractLocations")
+                        .HasForeignKey("ContractId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MedicalExaminations.Models.Location", "Location")
+                        .WithMany("ContractLocations")
+                        .HasForeignKey("LocationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Contract");
+
+                    b.Navigation("Location");
+                });
+
             modelBuilder.Entity("MedicalExaminations.Models.MedicalExamination", b =>
                 {
                     b.HasOne("MedicalExaminations.Models.Animal", "Animal")
@@ -560,21 +574,15 @@ namespace MedicalExaminations.Migrations
                 {
                     b.HasOne("MedicalExaminations.Models.Location", "Location")
                         .WithMany("Organizations")
-                        .HasForeignKey("LocationId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("LocationId");
 
                     b.HasOne("MedicalExaminations.Models.OrganizationAttribute", "OrganizationAttribute")
                         .WithMany("Organizations")
-                        .HasForeignKey("OrganizationAttributeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("OrganizationAttributeId");
 
                     b.HasOne("MedicalExaminations.Models.OrganizationType", "OrganizationType")
                         .WithMany("Organizations")
-                        .HasForeignKey("OrganizationTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("OrganizationTypeId");
 
                     b.Navigation("Location");
 
@@ -585,10 +593,6 @@ namespace MedicalExaminations.Migrations
 
             modelBuilder.Entity("MedicalExaminations.Models.User", b =>
                 {
-                    b.HasOne("MedicalExaminations.Models.Organization", "Organization")
-                        .WithMany("Users")
-                        .HasForeignKey("OrganizationId");
-
                     b.HasOne("MedicalExaminations.Models.PermissionManager", "PermissionManager")
                         .WithMany("Users")
                         .HasForeignKey("PermissionManagerId")
@@ -601,11 +605,17 @@ namespace MedicalExaminations.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Organization");
+                    b.HasOne("MedicalExaminations.Models.Organization", "Workplace")
+                        .WithMany("Users")
+                        .HasForeignKey("WorkplaceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("PermissionManager");
 
                     b.Navigation("Role");
+
+                    b.Navigation("Workplace");
                 });
 
             modelBuilder.Entity("MedicalExaminations.Models.Animal", b =>
@@ -622,12 +632,16 @@ namespace MedicalExaminations.Migrations
 
             modelBuilder.Entity("MedicalExaminations.Models.Contract", b =>
                 {
+                    b.Navigation("ContractLocations");
+
                     b.Navigation("MedicalExaminations");
                 });
 
             modelBuilder.Entity("MedicalExaminations.Models.Location", b =>
                 {
                     b.Navigation("Animals");
+
+                    b.Navigation("ContractLocations");
 
                     b.Navigation("Organizations");
                 });

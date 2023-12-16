@@ -9,7 +9,8 @@ namespace MedicalExaminations.Models
         public string Name { get; set; }
 
         public List<Organization> Organizations { get; set; }
-        public List<Contract> Contracts { get; set; }
+        public List<ContractLocation> ContractLocations { get; set; }
+        // public List<Contract> Contracts { get; set; }
         public List<Animal> Animals { get; set; }
     }
 }
