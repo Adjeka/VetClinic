@@ -1,5 +1,6 @@
 ﻿using MedicalExaminations.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace MedicalExaminations.Controllers
@@ -23,7 +24,10 @@ namespace MedicalExaminations.Controllers
 
         public IActionResult Create()
         {
-            return View();
+            ViewBag.Locations = new SelectList(db.Locations.ToList(), "Id", "Name");
+            ViewBag.OrganizationTypes = new SelectList(db.OrganizationTypes.ToList(), "Id", "Name");
+            ViewBag.OrganizationAttributes = new SelectList(db.OrganizationAttributes.ToList(), "Id", "Name");
+            return View("CreateView");
         }
 
         [HttpPost]
