@@ -1,0 +1,73 @@
+﻿@model MedicalExaminations.Models.Organization
+
+@{
+    ViewData["Title"] = "CreateView";
+}
+
+@section style {
+    <link rel="stylesheet" href="~/css/organization-card.css" />
+}
+
+
+<div class="wrapper">
+    <h1 class="header-label">Создание организации</h1>
+
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <hr />
+                <div class="form-group">
+                    <label asp-for="INN" class="control-label"></label>
+                    <input asp-for="INN" class="form-control" type="text" />
+                    <span asp-validation-for="INN" class="text-danger"></span>
+                </div>
+                <hr />
+                <div class="form-group">
+                    <label asp-for="KPP" class="control-label"></label>
+                    <input asp-for="KPP" class="form-control" type="text" />
+                    <span asp-validation-for="KPP" class="text-danger"></span>
+                </div>
+                <hr />
+                <div class="form-group">
+                    <label asp-for="LocationId" class="control-label"></label>
+                    <select asp-for="LocationId" class ="form-control" asp-items="ViewBag.Locations"></select>
+                </div>
+                <hr />
+                <div class="form-group">
+                    <label asp-for="Street" class="control-label"></label>
+                    <input asp-for="Street" class="form-control" />
+                    <span asp-validation-for="Street" class="text-danger"></span>
+                </div>
+                <hr />
+                <div class="form-group">
+                    <label asp-for="HouseNumber" class="control-label"></label>
+                    <input asp-for="HouseNumber" class="form-control" type="text"/>
+                    <span asp-validation-for="HouseNumber" class="text-danger"></span>
+                </div>
+                <hr />
+                <div class="form-group">
+                    <label asp-for="OrganizationTypeId" class="control-label"></label>
+                    <select asp-for="OrganizationTypeId" class ="form-control" asp-items="ViewBag.OrganizationTypes"></select>
+                </div>
+                <hr />
+                <div class="form-group">
+                    <label asp-for="OrganizationAttributeId" class="control-label"></label>
+                    <select asp-for="OrganizationAttributeId" class ="form-control" asp-items="ViewBag.OrganizationAttributes"></select>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Создать" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

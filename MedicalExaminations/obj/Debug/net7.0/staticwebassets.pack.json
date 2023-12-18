@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\css\\mainform.css"
     },
     {
+      "Id": "D:\\Учеба\\ПИС 2\\VetClinic\\MedicalExaminations\\wwwroot\\css\\organization-card.css",
+      "PackagePath": "staticwebassets\\css\\organization-card.css"
+    },
+    {
       "Id": "D:\\Учеба\\ПИС 2\\VetClinic\\MedicalExaminations\\wwwroot\\css\\registry.css",
       "PackagePath": "staticwebassets\\css\\registry.css"
     },

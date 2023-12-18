@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "gYRvl0Bl4UrQmnchMyiyuZprxo7M1V8xuYygssBJx1g=",
+  "Hash": "p0URnW/BkFZPLVy4TIgZGE04DH5HgnjbWB3pBrDktCw=",
   "Source": "MedicalExaminations",
   "BasePath": "_content/MedicalExaminations",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\mainform.css"
+    },
+    {
+      "Identity": "D:\\Учеба\\ПИС 2\\VetClinic\\MedicalExaminations\\wwwroot\\css\\organization-card.css",
+      "SourceId": "MedicalExaminations",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Учеба\\ПИС 2\\VetClinic\\MedicalExaminations\\wwwroot\\",
+      "BasePath": "_content/MedicalExaminations",
+      "RelativePath": "css/organization-card.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\organization-card.css"
     },
     {
       "Identity": "D:\\Учеба\\ПИС 2\\VetClinic\\MedicalExaminations\\wwwroot\\css\\registry.css",
