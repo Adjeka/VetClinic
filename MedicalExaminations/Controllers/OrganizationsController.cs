@@ -27,7 +27,7 @@ namespace MedicalExaminations.Controllers
             ViewBag.Locations = new SelectList(db.Locations.ToList(), "Id", "Name");
             ViewBag.OrganizationTypes = new SelectList(db.OrganizationTypes.ToList(), "Id", "Name");
             ViewBag.OrganizationAttributes = new SelectList(db.OrganizationAttributes.ToList(), "Id", "Name");
-            return View("CreateView");
+            return View();
         }
 
         [HttpPost]
@@ -36,6 +36,43 @@ namespace MedicalExaminations.Controllers
             db.Organizations.Add(organization);
             await db.SaveChangesAsync();
             return RedirectToAction("Index");
+        }
+
+        public async Task<IActionResult> Edit(int? id)
+        {
+            ViewBag.Locations = new SelectList(db.Locations.ToList(), "Id", "Name");
+            ViewBag.OrganizationTypes = new SelectList(db.OrganizationTypes.ToList(), "Id", "Name");
+            ViewBag.OrganizationAttributes = new SelectList(db.OrganizationAttributes.ToList(), "Id", "Name");
+            if (id != null)
+            {
+                Organization? organization = await db.Organizations.FirstOrDefaultAsync(p => p.Id == id);
+                if (organization != null) return View(organization);
+            }
+            return NotFound();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(Organization organization)
+        {
+            db.Organizations.Update(organization);
+            await db.SaveChangesAsync();
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id != null)
+            {
+                Organization? organization = await db.Organizations.FirstOrDefaultAsync(p => p.Id == id);
+                if (organization != null)
+                {
+                    db.Organizations.Remove(organization);
+                    await db.SaveChangesAsync();
+                    return RedirectToAction("Index");
+                }
+            }
+            return NotFound();
         }
     }
 }
