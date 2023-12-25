@@ -11,6 +11,8 @@
 
 .icon {
     position: absolute;
+    width: 60px;
+    height: 50px;
 }
 
 .page-top-left { 
@@ -37,7 +39,7 @@ body {
     position: relative;
     background-color: rgba(93, 93, 129, 0.3);
     width: 86%;
-    margin: calc((100vh - 400px) / 2) auto; 
+    margin: calc((100vh - 450px) / 2) auto; 
     padding: 5rem;
     border-radius: 50px;
 }
