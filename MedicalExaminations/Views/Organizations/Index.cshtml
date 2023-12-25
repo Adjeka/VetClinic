@@ -51,7 +51,7 @@
         <div class="buttons">
             <a asp-action="Create"><input type="button" value="Добавить" /></a>
             <form id="Delete" asp-action="Delete" method="post" asp-route-id="">
-                <input type="submit" value="Удалить" />
+                <input type="submit" value="Удалить" onclick="return confirmDelete()" />
             </form>
             <a asp-action="Export"><input type="button" value="Экспорт" /></a>
         </div>
@@ -88,6 +88,18 @@
             href[3] = id;
             $link.attr('action', href.join('/'));
         });
+
+        function confirmDelete() {
+            var id = Number($('.selected').find("td").eq(0).html()); 
+            if (Number.isInteger(id)) {
+                if (confirm('Вы уверены, что хотите удалить?')) {
+                    return true;
+                }
+                else
+                    return false;
+            }
+            else return false;
+        }
 
     </script>
 }

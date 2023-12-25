@@ -3,8 +3,8 @@
     2. разобраться с hr 
 */
 
-* { 
-    margin: 0; 
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -32,6 +32,7 @@ body {
     top: -80px;
     left: 0px;
     font-size: 4rem;
+    font-weight: 500;
     color: #5D5D81;
 }
 
@@ -45,21 +46,30 @@ body {
 }
 
 form {
-    border-radius: 50px;
-    padding: 5px 2rem;
-    background: linear-gradient(to right, #dadee7 10em, white 0%);
+    border-radius: 40px;
+    background: linear-gradient(to right, #dadee7 11.5em, white 0%);
     overflow: hidden; /* если каким-то образом select окажется слишком большим несмотря на заданный размер*/
     font-size: inherit;
 }
 
 input, button, select { 
-    font-size: inherit;
+    font-size: 28px;
+}
+
+input[type="text"], select {
+    width: 63%;
+    outline: none;
+}
+
+input[type="text"] {
+    padding: 0 5px;
 }
 
 label {
     display: inline-block;
     float: left;
-    width: 9em;
+    width: 10.5em;
+    margin-left: 2rem;
 }
 
 hr {
