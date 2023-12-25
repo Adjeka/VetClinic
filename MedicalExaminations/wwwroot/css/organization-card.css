@@ -52,17 +52,26 @@ form {
     font-size: inherit;
 }
 
-input, button, select { 
-    font-size: 28px;
+.form-group {
+    height: 39px;
+    min-width: 1500px;
 }
 
-input[type="text"], select {
-    width: 63%;
-    outline: none;
+input, button, select {
+    font-size: 28px;
+    border: none;
 }
 
 input[type="text"] {
+    width: 69%;
     padding: 0 5px;
+    outline: none;
+}
+
+select {
+    width: fit-content;
+    appearance: none;
+    outline: none;
 }
 
 label {
@@ -77,14 +86,6 @@ hr {
     margin: 0 -2rem;
 }
 
-input, select { 
-    border: none;
-}
-
-select { 
-    max-inline-size: 23.5em;
-}
-
 .btn {
     position: absolute;
     right: 5rem;
@@ -95,4 +96,5 @@ select {
     background-color: #BFCDE0;
     color: #5D5D81;
     border-radius: 10px;
+    cursor: pointer;
 }
