@@ -11,6 +11,8 @@
 
 .icon {
     position: absolute;
+    width: 60px;
+    height: 50px;
 }
 
 .page-top-left { 
