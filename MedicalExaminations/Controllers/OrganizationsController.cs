@@ -83,7 +83,6 @@ namespace MedicalExaminations.Controllers
             using (XLWorkbook workbook = new XLWorkbook())
             {
                 var worksheet = workbook.Worksheets.Add("Organizations");
-                worksheet.Rows().Style.Font.FontFamilyNumbering = XLFontFamilyNumberingValues.Roman;
                 worksheet.Style.Font.FontSize = 14;
                 worksheet.Cell("A1").Value = "Наименование";
                 worksheet.Cell("B1").Value = "ИНН";
@@ -92,14 +91,11 @@ namespace MedicalExaminations.Controllers
                 worksheet.Cell("E1").Value = "Тип организации";
                 worksheet.Cell("F1").Value = "ИП/Юридическое лицо";
                 worksheet.Row(1).Style.Font.Bold = true;
-                worksheet.Column("A").Width = 20;
-                worksheet.Column("B").Width = 15;
-                worksheet.Column("C").Width = 15;
-                worksheet.Column("D").Width = 20;
-                worksheet.Column("E").Width = 50;
-                worksheet.Column("F").Width = 35;
                 worksheet.Row(1).Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
-                worksheet.Row(1).Style.Font.FontFamilyNumbering = XLFontFamilyNumberingValues.Roman;
+                worksheet.Range(1, 1, 1, 6).Style.Border.BottomBorder = XLBorderStyleValues.Medium;
+                worksheet.Range(1, 1, 1, 6).Style.Border.RightBorder = XLBorderStyleValues.Medium;
+                worksheet.Range(1, 1, 1, 6).Style.Border.LeftBorder = XLBorderStyleValues.Medium;
+                worksheet.Range(1, 1, 1, 6).Style.Border.TopBorder = XLBorderStyleValues.Medium;
 
                 var list = db.Organizations
                 .Include(o => o.OrganizationType)
@@ -116,11 +112,16 @@ namespace MedicalExaminations.Controllers
                     worksheet.Cell(i + 2, 5).Value = list[i].OrganizationType.Name;
                     worksheet.Cell(i + 2, 6).Value = list[i].OrganizationAttribute.Name;
                     worksheet.Row(i + 2).Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
+                    worksheet.Range(i + 2, 1, i + 2, 6).Style.Border.BottomBorder = XLBorderStyleValues.Medium;
+                    worksheet.Range(i + 2, 1, i + 2, 6).Style.Border.RightBorder = XLBorderStyleValues.Medium;
+                    worksheet.Range(i + 2, 1, i + 2, 6).Style.Border.LeftBorder = XLBorderStyleValues.Medium;
+                    worksheet.Range(i + 2, 1, i + 2, 6).Style.Border.TopBorder = XLBorderStyleValues.Medium;
 
                 }
 
                 using (var stream = new MemoryStream())
                 {
+                    worksheet.Columns().AdjustToContents();
                     workbook.SaveAs(stream);
                     stream.Flush();
 
