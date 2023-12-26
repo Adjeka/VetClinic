@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinic\\MedicalExaminations\\MedicalExaminations.csproj": {}
+    "C:\\Users\\Роман\\Documents\\GitHub\\VetClinicGays\\MedicalExaminations\\MedicalExaminations.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinic\\MedicalExaminations\\MedicalExaminations.csproj": {
+    "C:\\Users\\Роман\\Documents\\GitHub\\VetClinicGays\\MedicalExaminations\\MedicalExaminations.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinic\\MedicalExaminations\\MedicalExaminations.csproj",
+        "projectUniqueName": "C:\\Users\\Роман\\Documents\\GitHub\\VetClinicGays\\MedicalExaminations\\MedicalExaminations.csproj",
         "projectName": "MedicalExaminations",
-        "projectPath": "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinic\\MedicalExaminations\\MedicalExaminations.csproj",
-        "packagesPath": "C:\\Users\\Gemeni\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinic\\MedicalExaminations\\obj\\",
+        "projectPath": "C:\\Users\\Роман\\Documents\\GitHub\\VetClinicGays\\MedicalExaminations\\MedicalExaminations.csproj",
+        "packagesPath": "C:\\Users\\Роман\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Роман\\Documents\\GitHub\\VetClinicGays\\MedicalExaminations\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Gemeni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Роман\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -45,6 +47,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "ClosedXML": {
+              "target": "Package",
+              "version": "[0.102.1, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -56,6 +62,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.14, )"
+            },
+            "Microsoft.Office.Interop.Excel": {
+              "target": "Package",
+              "version": "[15.0.4795.1001, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -93,7 +103,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

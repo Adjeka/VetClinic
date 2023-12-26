@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using ClosedXML.Excel;
 
 namespace MedicalExaminations.Controllers
 {
@@ -70,9 +72,65 @@ namespace MedicalExaminations.Controllers
                     db.Organizations.Remove(organization);
                     await db.SaveChangesAsync();
                     return RedirectToAction("Index");
+
                 }
             }
             return NotFound();
+        }
+
+        public IActionResult Export()
+        {
+            using (XLWorkbook workbook = new XLWorkbook())
+            {
+                var worksheet = workbook.Worksheets.Add("Organizations");
+                worksheet.Rows().Style.Font.FontFamilyNumbering = XLFontFamilyNumberingValues.Roman;
+                worksheet.Style.Font.FontSize = 14;
+                worksheet.Cell("A1").Value = "Наименование";
+                worksheet.Cell("B1").Value = "ИНН";
+                worksheet.Cell("C1").Value = "КПП";
+                worksheet.Cell("D1").Value = "Адрес регистрации";
+                worksheet.Cell("E1").Value = "Тип организации";
+                worksheet.Cell("F1").Value = "ИП/Юридическое лицо";
+                worksheet.Row(1).Style.Font.Bold = true;
+                worksheet.Column("A").Width = 20;
+                worksheet.Column("B").Width = 15;
+                worksheet.Column("C").Width = 15;
+                worksheet.Column("D").Width = 20;
+                worksheet.Column("E").Width = 50;
+                worksheet.Column("F").Width = 35;
+                worksheet.Row(1).Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
+                worksheet.Row(1).Style.Font.FontFamilyNumbering = XLFontFamilyNumberingValues.Roman;
+
+                var list = db.Organizations
+                .Include(o => o.OrganizationType)
+                .Include(o => o.OrganizationAttribute)
+                .Include(o => o.Location)
+                .ToList();
+
+                for (int i = 0; i < list.Count(); i++)
+                {
+                    worksheet.Cell(i + 2, 1).Value = list[i].Name;
+                    worksheet.Cell(i + 2, 2).Value = list[i].INN;
+                    worksheet.Cell(i + 2, 3).Value = list[i].KPP;
+                    worksheet.Cell(i + 2, 4).Value = $"{list[i].Location.Name}, ул.{list[i].Street}, д.{list[i].HouseNumber}";
+                    worksheet.Cell(i + 2, 5).Value = list[i].OrganizationType.Name;
+                    worksheet.Cell(i + 2, 6).Value = list[i].OrganizationAttribute.Name;
+                    worksheet.Row(i + 2).Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
+
+                }
+
+                using (var stream = new MemoryStream())
+                {
+                    workbook.SaveAs(stream);
+                    stream.Flush();
+
+                    return new FileContentResult(stream.ToArray(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
+                    {
+                        FileDownloadName = "organizations.xlsx"
+                    };
+                }
+
+            }
         }
     }
 }
