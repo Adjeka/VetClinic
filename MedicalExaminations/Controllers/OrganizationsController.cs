@@ -17,11 +17,12 @@ namespace MedicalExaminations.Controllers
 
         public async Task<IActionResult> Index()
         {
-            return View(await db.Organizations
+            return View(db.Organizations
                 .Include(o => o.OrganizationType)
                 .Include(o => o.OrganizationAttribute)
                 .Include(o => o.Location)
-        .ToListAsync());
+                .Where(GlobalConfig.CurrentUser.PermissionManager.OrganizationsFilter)
+        .ToList());
         }
 
         public IActionResult Create()

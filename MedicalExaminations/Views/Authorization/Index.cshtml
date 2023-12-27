@@ -10,7 +10,7 @@
 
 <div class="autorization">
     <h1>Авторизация</h1>
-    <form class="log-in" name="autorization" action="" method="post">
+    <form class="log-in" name="authorization" method="post">
         <div class="inputs">
             <label>
                 Логин
@@ -18,9 +18,10 @@
             </label>
             <label>
                 Пароль
-                <input type="password" name="login" placeholder="Пароль" required>
+                <input type="password" name="password" placeholder="Пароль" required>
             </label>
         </div>
-        <button class="log-in-button" type="submit" name="log-in-button">Войти</button>
+        @ViewBag.Message 
+        <button class="log-in-button" type="submit" name="log-in-button" asp-action="Authorize" asp-controller="Authorization">Войти</button>
     </form>
 </div>
