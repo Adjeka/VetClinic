@@ -1,5 +1,8 @@
-﻿namespace MedicalExaminations.Models.PermissionManagers
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace MedicalExaminations.Models.PermissionManagers
 {
+    [NotMapped]
     public class CuratorPM : PermissionManager
     {
         private readonly User user;

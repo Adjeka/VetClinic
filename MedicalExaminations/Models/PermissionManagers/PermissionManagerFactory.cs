@@ -1,8 +1,10 @@
 ﻿using DocumentFormat.OpenXml.Wordprocessing;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MedicalExaminations.Models.PermissionManagers
 {
+    [NotMapped]
     public static class PermissionManagerFactory
     {
         /// <summary>
