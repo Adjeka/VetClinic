@@ -1,0 +1,148 @@
+﻿@model MedicalExaminations.Models.Animal
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+@section style {
+    <link rel="stylesheet" href="~/css/animal-card.css" />
+}
+
+<a href="javascript:history.back()"><img class="icon page-top-left" src="~/img/arrow-back.png" /></a>
+
+<div class="wrapper">
+    <h1 class="header-label">Создание карточки животного</h1>
+
+    <div class="content">
+        <div class="left-column">
+            <div class="slider-container">
+                <div class="slider">
+                    <img src="https://i.postimg.cc/nhsTGkLQ/1.png" alt="Белый пушистый кот">
+                    <img src="https://i.postimg.cc/cLVh9nKk/2.png" alt="Рыжий пушистый кот в джинсах">
+                    <img src="https://i.postimg.cc/4NxWmZkP/3.png" alt="Бело-рыжий пушистый кот">
+                    <img src="https://i.postimg.cc/FFZPrzq1/8.png" alt="Золотистый пушистый кот">
+                    <img src="https://i.postimg.cc/jd3Zf9Rb/7.png" alt="Золотистый пушистый кот">
+                </div>
+                <button class="prev-button" aria-label="Посмотреть предыдущий слайд">&lt;</button>
+                <button class="next-button" aria-label="Посмотреть следующий слайд">&gt</button>
+            </div>
+            <div class="tableDiv">
+                <table id="myTable" class="table">
+                    <thead>
+                        <tr>
+                            <th><span>Медосмотры</span><a asp-action="#" asp-controller="#" id="plus"><img src="~/img/plus.png" alt="plus" /></a></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>16:15 26.11.2023</td>
+                        </tr>
+                        <tr>
+                            <td>16:15 26.11.2023</td>
+                        </tr>
+                        <tr>
+                            <td>16:15 26.11.2023</td>
+                        </tr>
+                        <tr>
+                            <td>16:15 26.11.2023</td>
+                        </tr>
+                        <tr>
+                            <td>16:15 26.11.2023</td>
+                        </tr>
+                        <tr>
+                            <td>16:15 26.11.2023</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="RegistrationNumber" class="control-label"></label>
+                <input asp-for="RegistrationNumber" class="form-control" type="text" />
+                <span asp-validation-for="RegistrationNumber" class="text-danger"></span>
+            </div>
+            <hr />
+            <div class="form-group">
+                <label asp-for="LocationId" class="control-label"></label>
+                <select asp-for="LocationId" class="form-control" asp-items="ViewBag.Locations"></select>
+            </div>
+            <hr />
+            <div class="form-group">
+                <label asp-for="CategoryId" class="control-label"></label>
+                <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.AnimalCategories"></select>
+            </div>
+            <hr />
+            <div class="form-group">
+                <label asp-for="Sex" class="control-label"></label>
+                <input asp-for="Sex" class="form-control" type="text" />
+                <span asp-validation-for="Sex" class="text-danger"></span>
+            </div>
+            <hr />
+            <div class="form-group">
+                <label asp-for="BirthYear" class="control-label"></label>
+                <input asp-for="BirthYear" class="form-control" type="text" />
+                <span asp-validation-for="BirthYear" class="text-danger"></span>
+            </div>
+            <hr />
+            <div class="form-group">
+                <label asp-for="ChipNumber" class="control-label"></label>
+                <input asp-for="ChipNumber" class="form-control" type="text" />
+                <span asp-validation-for="ChipNumber" class="text-danger"></span>
+            </div>
+            <hr />
+            <div class="form-group">
+                <label asp-for="Nickname" class="control-label"></label>
+                <input asp-for="Nickname" class="form-control" type="text" />
+                <span asp-validation-for="Nickname" class="text-danger"></span>
+            </div>
+            <hr />
+            <div class="form-group">
+                <label asp-for="DistinguishingMarks" class="control-label"></label>
+                <input asp-for="DistinguishingMarks" class="form-control" type="text" />
+                <span asp-validation-for="DistinguishingMarks" class="text-danger"></span>
+            </div>
+            <input type="submit" value="Создать" class="btn btn-primary" />
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+
+        const slider = document.querySelector('.slider');
+        const prevButton = document.querySelector('.prev-button');
+        const nextButton = document.querySelector('.next-button');
+        const slides = Array.from(slider.querySelectorAll('img'));
+        const slideCount = slides.length;
+        let slideIndex = 0;
+
+        prevButton.addEventListener('click', showPreviousSlide);
+        nextButton.addEventListener('click', showNextSlide);
+
+        function showPreviousSlide() {
+            slideIndex = (slideIndex - 1 + slideCount) % slideCount;
+            updateSlider();
+        }
+
+        function showNextSlide() {
+            slideIndex = (slideIndex + 1) % slideCount;
+            updateSlider();
+        }
+
+        function updateSlider() {
+            slides.forEach((slide, index) => {
+                if (index === slideIndex) {
+                    slide.style.display = 'block';
+                } else {
+                    slide.style.display = 'none';
+                }
+            });
+        }
+
+        updateSlider();
+    </script>
+}

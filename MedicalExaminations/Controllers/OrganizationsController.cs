@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using ClosedXML.Excel;
 
 namespace MedicalExaminations.Controllers
@@ -10,6 +9,7 @@ namespace MedicalExaminations.Controllers
     public class OrganizationsController : Controller
     {
         AppDbContext db;
+
         public OrganizationsController(AppDbContext context)
         {
             db = context;
@@ -21,7 +21,7 @@ namespace MedicalExaminations.Controllers
                 .Include(o => o.OrganizationType)
                 .Include(o => o.OrganizationAttribute)
                 .Include(o => o.Location)
-        .ToListAsync());
+            .ToListAsync());
         }
 
         public IActionResult Create()
