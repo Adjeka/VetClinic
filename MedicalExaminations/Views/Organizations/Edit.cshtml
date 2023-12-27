@@ -69,29 +69,29 @@
     </div>
 </div>
 
-@section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
+@section scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.js"></script>
+
+    <script>
+        let btnEdit = document.querySelector("#edit-button");
+        let btnSubmit = document.querySelector("#submit-button");
+
+        btnEdit.addEventListener("click", () => {
+            const inputElements = document.querySelectorAll("input");
+            for (var i = 0; i < inputElements.length; i++) {
+                inputElements[i].removeAttribute("readonly");
+            }
+
+            const selectElements = document.querySelectorAll("select");
+            for (var i = 0; i < selectElements.length; i++) {
+                selectElements[i].style.pointerEvents = "auto";
+                selectElements[i].classList.remove("readonly");
+            }
+
+            document.getElementById("edit-button").style.display = "none";
+            document.getElementById("submit-button").style.display = "block";
+        });
+    </script>
 }
-
-<script>
-    let btnEdit = document.querySelector("#edit-button");
-    let btnSubmit = document.querySelector("#submit-button");
-
-    btnEdit.addEventListener("click", () => {
-        const inputElements = document.querySelectorAll("input");
-        for (var i = 0; i < inputElements.length; i++) {
-            inputElements[i].removeAttribute("readonly");
-        }
-
-        const selectElements = document.querySelectorAll("select");
-        for (var i = 0; i < selectElements.length; i++) {
-            selectElements[i].style.pointerEvents = "auto";
-            selectElements[i].classList.remove("readonly");
-        }
-
-        document.getElementById("edit-button").style.display = "none";
-        document.getElementById("submit-button").style.display = "block";
-    });
-</script>
