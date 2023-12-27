@@ -16,7 +16,7 @@ namespace MedicalExaminations.Models.PermissionManagers
         public override Func<Organization, bool> OrganizationsFilter => (organization =>
         {
             return
-            organization.OrganizationType.Name == "Испольнительный орган государственной власти" ||
+            organization.OrganizationType.Name == "Исполнительный орган государственной власти" ||
             organization.OrganizationType.Name == "Орган местного самоуправления" ||
             organization.OrganizationType.Name == "Ветеринарная клиника: государственная";
         });

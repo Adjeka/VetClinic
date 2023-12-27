@@ -1,5 +1,6 @@
 ﻿using MedicalExaminations.Models;
 using MedicalExaminations.Models.PermissionManagers;
+using Microsoft.EntityFrameworkCore;
 using NuGet.Protocol.Plugins;
 
 namespace MedicalExaminations
@@ -11,7 +12,10 @@ namespace MedicalExaminations
 
         public bool Authorize(string login, string password)
         {
-            var user = context.Users.Where(u => u.Login == login).FirstOrDefault();
+            var user = context.Users
+                .Include(u => u.Role)
+                .Include(u => u.Workplace)
+                .Where(u => u.Login == login).FirstOrDefault();
 
             if (user == null || !BCrypt.Net.BCrypt.EnhancedVerify(password, user.Password))
                 return false;
