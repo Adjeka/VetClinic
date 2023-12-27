@@ -24,20 +24,6 @@ nav a:first-child {
     border: none;
 }
 
-nav .registries {
-    color: #BFCDE0;
-    text-decoration: none;
-    font-size: 32px;
-    font-weight: 400;
-    width: 90%;
-    border-left: 1px solid #BFCDE0;
-}
-
-nav .registries a {
-    width: fit-content;
-    padding: 16px 16px;
-}
-
 nav a:first-child img {
     margin: 12px 16px;
 }
@@ -46,6 +32,45 @@ nav a img {
     width: 40px;
     margin: 16px 16px;
 }
+
+nav .registries {
+    width: 90%;
+    border-left: 1px solid #BFCDE0;
+    position: relative;
+    display: inline-block;
+}
+
+nav .registries .dropbtn {
+    width: fit-content;
+    padding: 15px 16px;
+    color: #BFCDE0;
+    border: none;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: normal;
+    background-color: #3B3355;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    width: 200px;
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+    background-color: white;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.registries:hover .dropdown-content {display: block;}
 
 h1 {
     font-size: 48px;
@@ -112,96 +137,6 @@ table tbody td {
     background-color: #3B3355;
     border: none;
     border-radius: 8px;
-}
-
-.content .edit .filtering, 
-.content .edit .sorting {
-    width: 80%;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    margin-top: 3%;
-}
-
-.content .edit .filtering .label, 
-.content .edit .sorting .label {
-    height: 33px;
-    display: flex;
-    border: 1px solid #3B3355;
-}
-
-.content .edit img {
-    width: 25px;
-    vertical-align: middle;
-    margin: 8px;
-}
-
-.content .edit h2 {
-    margin: 0;
-    margin-top: 1px;
-    font-size: 24px;
-    font-weight: 400;
-    color: #3B3355;
-    height: fit-content;
-}
-
-.content .edit .fields {
-    height: 170px;
-    display: none;
-    padding: 2.5px 9px 5px 9px;
-    border: 1px solid #3B3355;
-    border-top: none;
-}
-
-.content .edit .fields form {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.content .edit .fields form label {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    color: #3B3355;
-    font-size: 20px;
-}
-
-.content .edit .fields form label select {
-    margin: 0;
-    padding: 2px 5px;
-    width: 100%;
-    height: 30px;
-    border: 1px solid #3B3355;
-}
-
-.content .edit .fields form label input {
-    margin: 0;
-    padding: 2px 5px;
-    width: 100%;
-    height: 30px;
-    border: 1px solid #3B3355;
-}
-
-.content .edit .fields form .form-buttons {
-    margin-top: 5px;
-    width: 100%;
-    height: 33px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.content .edit .fields form .form-buttons button {
-    margin: 0;
-    padding: 0;
-    width: 46%;
-    height: 100%;
-    color: #BFCDE0;
-    line-height: 0.9;
-    background-color: #3B3355;
-    border: none;
 }
 
 input, img {

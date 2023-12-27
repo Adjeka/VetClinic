@@ -1,9 +1,4 @@
-﻿/* TODO: 
-    1. добавить верхней и нижней строке margin -5px чтобы избавиться от padding формы 
-    2. разобраться с hr 
-*/
-
-* {
+﻿* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -31,16 +26,23 @@ body {
     position: absolute;
     top: -80px;
     left: 0px;
-    font-size: 4rem;
+    font-size: 3.2rem;
     font-weight: 500;
     color: #5D5D81;
+}
+
+#edit-button {
+    position: absolute;
+    top: -80px;
+    right: 10px;
+    cursor: pointer;
 }
 
 .wrapper {
     position: relative;
     background-color: rgba(93, 93, 129, 0.3);
     width: 86%;
-    margin: calc((100vh - 450px) / 2) auto; 
+    margin: calc((100vh - 450px) / 2) auto;
     padding: 5rem;
     border-radius: 50px;
 }
@@ -54,22 +56,21 @@ form {
 
 .form-group {
     height: 39px;
-    min-width: 1500px;
 }
 
 input, button, select {
     font-size: 28px;
+    padding: 0 5px;
     border: none;
 }
 
 input[type="text"] {
-    width: 69%;
-    padding: 0 5px;
+    width: calc(100% - 13.5em);
     outline: none;
 }
 
 select {
-    width: fit-content;
+    width: calc(100% - 13.5em);
     appearance: none;
     outline: none;
 }
@@ -97,4 +98,17 @@ hr {
     color: #5D5D81;
     border-radius: 10px;
     cursor: pointer;
+}
+
+#submit-button {
+    position: absolute;
+    right: 5rem;
+    bottom: 0.5rem;
+    cursor: pointer;
+    background: none;
+    display: none;
+}
+
+[readonly], .readonly {
+    color: gray;
 }

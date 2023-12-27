@@ -1,7 +1,7 @@
 ﻿@model MedicalExaminations.Models.Organization
 
 @{
-    ViewData["Title"] = "CreateView";
+    ViewData["Title"] = "ViewAndEdit";
 }
 
 @section style {
@@ -12,7 +12,8 @@
 <a href="javascript:history.back()"><img class="icon page-top-left" src="~/img/arrow-back.png" /></a>
 
 <div class="wrapper">
-    <h1 class="header-label">@Model.Name</h1>
+    <h1 class="header-label">Карточка организации</h1>
+    <img src="~/img/edit.png" alt="edit" id="edit-button" />
 
     <div class="row">
         <div class="col-md-4">
@@ -20,68 +21,77 @@
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-group">
                     <label asp-for="Name" class="control-label"></label>
-                    <input asp-for="Name" class="form-control" />
+                    <input asp-for="Name" class="form-control" readonly />
                     <span asp-validation-for="Name" class="text-danger"></span>
                 </div>
                 <hr />
                 <div class="form-group">
                     <label asp-for="INN" class="control-label"></label>
-                    <input asp-for="INN" class="form-control" type="text" />
+                    <input asp-for="INN" class="form-control" type="text" readonly />
                     <span asp-validation-for="INN" class="text-danger"></span>
                 </div>
                 <hr />
                 <div class="form-group">
                     <label asp-for="KPP" class="control-label"></label>
-                    <input asp-for="KPP" class="form-control" type="text" />
+                    <input asp-for="KPP" class="form-control" type="text" readonly />
                     <span asp-validation-for="KPP" class="text-danger"></span>
                 </div>
                 <hr />
                 <div class="form-group">
                     <label asp-for="LocationId" class="control-label"></label>
-                    <select asp-for="LocationId" class ="form-control" asp-items="ViewBag.Locations"></select>
+                    <select asp-for="LocationId" class="form-control readonly" asp-items="ViewBag.Locations" style="pointer-events: none;"></select>
                 </div>
                 <hr />
                 <div class="form-group">
                     <label asp-for="Street" class="control-label"></label>
-                    <input asp-for="Street" class="form-control" />
+                    <input asp-for="Street" class="form-control" readonly />
                     <span asp-validation-for="Street" class="text-danger"></span>
                 </div>
                 <hr />
                 <div class="form-group">
                     <label asp-for="HouseNumber" class="control-label"></label>
-                    <input asp-for="HouseNumber" class="form-control" type="text"/>
+                    <input asp-for="HouseNumber" class="form-control" type="text" readonly />
                     <span asp-validation-for="HouseNumber" class="text-danger"></span>
                 </div>
                 <hr />
                 <div class="form-group">
                     <label asp-for="OrganizationTypeId" class="control-label"></label>
-                    <select asp-for="OrganizationTypeId" class ="form-control" asp-items="ViewBag.OrganizationTypes"></select>
+                    <select asp-for="OrganizationTypeId" class="form-control readonly" asp-items="ViewBag.OrganizationTypes" style="pointer-events: none;"></select>
                 </div>
                 <hr />
                 <div class="form-group">
                     <label asp-for="OrganizationAttributeId" class="control-label"></label>
-                    <select asp-for="OrganizationAttributeId" class ="form-control" asp-items="ViewBag.OrganizationAttributes"></select>
+                    <select asp-for="OrganizationAttributeId" class="form-control readonly" asp-items="ViewBag.OrganizationAttributes" style="pointer-events: none;"></select>
                 </div>
-                <div class="form-group">
-                    <input type="submit" value="Создать" class="btn btn-primary" />
-                </div>
+                <button type="submit" id="submit-button" class="btn-primary"><img src="~/img/ok.png" alt="submit" /></button>
             </form>
         </div>
     </div>
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
 
 <script>
-    function toggleFormElements(isDisabled) { 
-        const inputElements = document.querySelectorAll("input, select");
+    let btnEdit = document.querySelector("#edit-button");
+    let btnSubmit = document.querySelector("#submit-button");
+
+    btnEdit.addEventListener("click", () => {
+        const inputElements = document.querySelectorAll("input");
         for (var i = 0; i < inputElements.length; i++) {
-            inputElements[i].disabled = isDisabled;
+            inputElements[i].removeAttribute("readonly");
         }
-    }
-    toggleFormElements(true);
 
+        const selectElements = document.querySelectorAll("select");
+        for (var i = 0; i < selectElements.length; i++) {
+            selectElements[i].style.pointerEvents = "auto";
+            selectElements[i].classList.remove("readonly");
+        }
 
+        document.getElementById("edit-button").style.display = "none";
+        document.getElementById("submit-button").style.display = "block";
+    });
 </script>
