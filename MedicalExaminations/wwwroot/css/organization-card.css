@@ -55,7 +55,19 @@ form {
 }
 
 .form-group {
-    height: 39px;
+    max-height: 59px;
+}
+
+.text-danger {
+    display: inline-block;
+    font-size: 16px;
+    color: red;
+}
+
+.text-danger span {
+    position:relative;
+    top:-15px;
+    margin-left: 33px;
 }
 
 input, button, select {

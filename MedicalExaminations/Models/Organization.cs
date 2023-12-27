@@ -9,7 +9,7 @@ namespace MedicalExaminations.Models
 
         [Display(Name = "Наименование")]
         [Required(ErrorMessage = "Введите наименование организации")]
-        public string Name { get; set; } = null!;
+        public string Name { get; set; }
 
         [Display(Name = "ИНН")]
         [Required(ErrorMessage = "Введите ИНН организации")]
@@ -26,7 +26,7 @@ namespace MedicalExaminations.Models
 
         [Display(Name = "Улица")]
         [Required(ErrorMessage = "Укажите название улицы")]
-        public string Street { get; set; } = null!;
+        public string Street { get; set; }
 
         [Display(Name = "Дом")]
         [Required(ErrorMessage = "Укажите номер дома")]

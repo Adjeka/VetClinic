@@ -54,13 +54,25 @@ form {
     height: fit-content;
     border-radius: 40px;
     background: linear-gradient(to right, #dadee7 11.5em, white 0%);
-    overflow: hidden; /* если каким-то образом select окажется слишком большим несмотря на заданный размер*/
+    overflow: hidden;
     font-size: inherit;
     display: inline-block;
 }
 
 .form-group {
-    height: 39px;
+    max-height: 59px;
+}
+
+.text-danger {
+    display: inline-block;
+    font-size: 16px;
+    color: red;
+}
+
+.text-danger span {
+    position:relative;
+    top:-15px;
+    margin-left: 33px;
 }
 
 input, button, select {
