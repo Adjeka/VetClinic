@@ -11,10 +11,16 @@
 }
 
 <nav>
-    <a href="/Mainform/Index"><img src="/img/home.png" alt="home"></a>
-    <a href="#"><img src="/img/report.png" alt="report"></a>
-    <div class="registries"><a href="#">Реестры</a></div>
-    <a href="/Autorization/Index"><img src="/img/exit.png" alt="exit"></a>
+    <a href="/Mainform/Index"><img src="~/img/home.png" alt="home"></a>
+    <a href="#"><img src="~/img/report.png" alt="report"></a>
+    <div class="registries">
+        <button class="dropbtn">Реестры</button>
+        <div class="dropdown-content">
+            <a asp-action="Index" asp-controller="Animals">Животные</a>
+            <a asp-action="Index" asp-controller="Contracts">Муниципальные контракты</a>
+        </div>
+    </div>
+    <a href="/Autorization/Index"><img src="~/img/exit.png" alt="exit"></a>
 </nav>
 <h1>Реестр организаций</h1>
 <div class="content">
@@ -75,7 +81,8 @@
             var row = $(this).closest("tr");
             var id = Number(row.find("td").eq(0).html());
 
-            window.location.href = `/Organizations/Edit/${id}`;
+            if (Number.isInteger(id) && id != 0)
+                window.location.href = `/Organizations/Edit/${id}`;
         });
 
         $("#myTable tbody tr").click(function () {
@@ -90,8 +97,8 @@
         });
 
         function confirmDelete() {
-            var id = Number($('.selected').find("td").eq(0).html()); 
-            if (Number.isInteger(id)) {
+            var id = Number($('.selected').find("td").eq(0).html());
+            if (Number.isInteger(id) && id != 0) {
                 if (confirm('Вы уверены, что хотите удалить?')) {
                     return true;
                 }
@@ -100,6 +107,5 @@
             }
             else return false;
         }
-
     </script>
 }

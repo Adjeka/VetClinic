@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Роман\\Documents\\GitHub\\VetClinicGays\\MedicalExaminations\\MedicalExaminations.csproj": {}
+    "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinicFORK\\MedicalExaminations\\MedicalExaminations.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Роман\\Documents\\GitHub\\VetClinicGays\\MedicalExaminations\\MedicalExaminations.csproj": {
+    "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinicFORK\\MedicalExaminations\\MedicalExaminations.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Роман\\Documents\\GitHub\\VetClinicGays\\MedicalExaminations\\MedicalExaminations.csproj",
+        "projectUniqueName": "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinicFORK\\MedicalExaminations\\MedicalExaminations.csproj",
         "projectName": "MedicalExaminations",
-        "projectPath": "C:\\Users\\Роман\\Documents\\GitHub\\VetClinicGays\\MedicalExaminations\\MedicalExaminations.csproj",
-        "packagesPath": "C:\\Users\\Роман\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Роман\\Documents\\GitHub\\VetClinicGays\\MedicalExaminations\\obj\\",
+        "projectPath": "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinicFORK\\MedicalExaminations\\MedicalExaminations.csproj",
+        "packagesPath": "C:\\Users\\Gemeni\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinicFORK\\MedicalExaminations\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Роман\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Gemeni\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -63,10 +61,6 @@
               "target": "Package",
               "version": "[7.0.14, )"
             },
-            "Microsoft.Office.Interop.Excel": {
-              "target": "Package",
-              "version": "[15.0.4795.1001, )"
-            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[7.0.11, )"
@@ -103,7 +97,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
