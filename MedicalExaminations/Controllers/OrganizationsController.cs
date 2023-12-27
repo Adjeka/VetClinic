@@ -15,7 +15,7 @@ namespace MedicalExaminations.Controllers
             db = context;
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             return View(db.Organizations
                 .Include(o => o.OrganizationType)
@@ -73,7 +73,6 @@ namespace MedicalExaminations.Controllers
                     db.Organizations.Remove(organization);
                     await db.SaveChangesAsync();
                     return RedirectToAction("Index");
-
                 }
             }
             return NotFound();

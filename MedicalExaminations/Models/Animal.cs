@@ -9,7 +9,7 @@ namespace MedicalExaminations.Models
         public int RegistrationNumber { get; set; }
         public int LocationId { get; set; }
         public Location Location { get; set; } = null!; 
-        public int CategoryId { get; set; }
+        public int AnimalCategoryId { get; set; }
         public AnimalCategory AnimalCategory { get; set; } = null!;
         public char Sex { get; set; }
         public int BirthYear { get; set; }
