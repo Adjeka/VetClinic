@@ -17,6 +17,7 @@ namespace MedicalExaminations.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.CanEditOrganizationsRegistry = GlobalConfig.CurrentUser.PermissionManager.CanEditOrganizationsRegistry;
             return View(db.Organizations
                 .Include(o => o.OrganizationType)
                 .Include(o => o.OrganizationAttribute)
@@ -46,6 +47,7 @@ namespace MedicalExaminations.Controllers
             ViewBag.Locations = new SelectList(db.Locations.ToList(), "Id", "Name");
             ViewBag.OrganizationTypes = new SelectList(db.OrganizationTypes.ToList(), "Id", "Name");
             ViewBag.OrganizationAttributes = new SelectList(db.OrganizationAttributes.ToList(), "Id", "Name");
+            ViewBag.CanEditOrganizationsRegistry = GlobalConfig.CurrentUser.PermissionManager.CanEditOrganizationsRegistry;
             if (id != null)
             {
                 Organization? organization = await db.Organizations.FirstOrDefaultAsync(p => p.Id == id);

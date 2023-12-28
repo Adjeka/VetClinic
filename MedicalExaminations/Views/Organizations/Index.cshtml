@@ -16,8 +16,8 @@
     <div class="registries">
         <button class="dropbtn">Реестры</button>
         <div class="dropdown-content">
-            <a asp-action="Index" asp-controller="Animals">Животные</a>
-            <a asp-action="Index" asp-controller="Contracts">Муниципальные контракты</a>
+            <a asp-action="Index" asp-controller="Animals" onclick="return hasViewAnimalsRights()">Животные</a>
+            <a asp-action="Index" asp-controller="Contracts" onclick="return hasViewContractsRights()">Муниципальные контракты</a>
         </div>
     </div>
     <a href="/Authorization/Index"><img src="~/img/exit.png" alt="exit"></a>
@@ -55,7 +55,7 @@
     </div>
     <div class="edit">
         <div class="buttons">
-            <a asp-action="Create"><input type="button" value="Добавить" /></a>
+            <a asp-action="Create"><input type="button" value="Добавить" onclick="return hasEditOrganizationsRights()"/></a>
             <form id="Delete" asp-action="Delete" method="post" asp-route-id="">
                 <input type="submit" value="Удалить" onclick="return confirmDelete()" />
             </form>
@@ -70,6 +70,10 @@
     <script src="~/lib/DataTables/datatables.min.js"></script>
 
     <script>
+        const canEditOrganizationsRegistry = ('@ViewBag.CanEditOrganizationsRegistry' === 'True');
+        const canViewAnimalsRegistry = ('@ViewBag.CanViewAnimalsRegistry' === 'True');
+        const canViewContractsRegistry = ('@ViewBag.CanViewContractsRegistry' === 'True');
+
         $(document).ready(function () {
             $('#myTable').DataTable({
                 "scrollY": "450px",
@@ -99,14 +103,33 @@
 
         function confirmDelete() {
             var id = Number($('.selected').find("td").eq(0).html());
-            if (Number.isInteger(id) && id != 0) {
-                if (confirm('Вы уверены, что хотите удалить?')) {
-                    return true;
-                }
-                else
+            if (hasEditOrganizationsRights()) {
+                if (Number.isInteger(id) && id != 0) {
+                    if (confirm('Вы уверены, что хотите удалить?'))
+                        return true;
                     return false;
+                }
+                return false;
             }
-            else return false;
+            return false;
+        }
+
+        function hasEditOrganizationsRights() {
+            if (!canEditOrganizationsRegistry)
+                alert('Недостаточно прав для изменения реестра');
+            return canEditOrganizationsRegistry;
+        }
+
+        function hasViewAnimalsRights() {
+            if (!canViewAnimalsRegistry)
+                alert("Недостаточно прав для просмотра реестра животных")
+            return canViewAnimalsRegistry;
+        }
+
+        function hasViewContractsRights() {
+            if (!canViewContractsRegistry)
+                alert("Недостаточно прав для просмотра реестра контрактов")
+            return canViewContractsRegistry;
         }
     </script>
 }

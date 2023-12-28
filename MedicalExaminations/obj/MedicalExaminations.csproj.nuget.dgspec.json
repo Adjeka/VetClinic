@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinicFORK\\MedicalExaminations\\MedicalExaminations.csproj": {}
+    "D:\\Учеба\\ПИС 2\\VetClinic\\MedicalExaminations\\MedicalExaminations.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinicFORK\\MedicalExaminations\\MedicalExaminations.csproj": {
+    "D:\\Учеба\\ПИС 2\\VetClinic\\MedicalExaminations\\MedicalExaminations.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinicFORK\\MedicalExaminations\\MedicalExaminations.csproj",
+        "projectUniqueName": "D:\\Учеба\\ПИС 2\\VetClinic\\MedicalExaminations\\MedicalExaminations.csproj",
         "projectName": "MedicalExaminations",
-        "projectPath": "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinicFORK\\MedicalExaminations\\MedicalExaminations.csproj",
-        "packagesPath": "C:\\Users\\Gemeni\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gemeni\\Documents\\GitHub\\VetClinicFORK\\MedicalExaminations\\obj\\",
+        "projectPath": "D:\\Учеба\\ПИС 2\\VetClinic\\MedicalExaminations\\MedicalExaminations.csproj",
+        "packagesPath": "C:\\Users\\Huawei\\.nuget\\packages\\",
+        "outputPath": "D:\\Учеба\\ПИС 2\\VetClinic\\MedicalExaminations\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Gemeni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Huawei\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -101,7 +101,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

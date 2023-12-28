@@ -8,9 +8,9 @@ namespace MedicalExaminations.Models.PermissionManagers
         public override bool CanViewAnimalsRegistry => true;
         public override bool CanViewOrganizationsRegistry => true;
         public override bool CanViewContractsRegistry => true;
-        public override bool CanChangeAnimalsRegistry => false;
-        public override bool CanChangeOrganizationsRegistry => true;
-        public override bool CanChangeContractsRegistry => false;
+        public override bool CanEditAnimalsRegistry => false;
+        public override bool CanEditOrganizationsRegistry => true;
+        public override bool CanEditContractsRegistry => false;
 
         public override Func<Animal, bool> AnimalsFilter => (animal => true);
         public override Func<Organization, bool> OrganizationsFilter => (organization =>

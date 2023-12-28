@@ -7,6 +7,7 @@ namespace MedicalExaminations.Controllers
     {
         public IActionResult Index()
         {
+            ViewBag.CanEditContractsRegistry = GlobalConfig.CurrentUser.PermissionManager.CanEditOrganizationsRegistry;
             return View();
         }
     }

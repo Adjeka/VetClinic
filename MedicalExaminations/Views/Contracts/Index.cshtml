@@ -4,3 +4,26 @@
 
 <div>
 </div>
+
+<script>
+    const canEditContractsRegistry = ('@ViewBag.CanEditContractsRegistry' === 'True');
+    const canViewAnimalsRegistry = ('@ViewBag.CanViewAnimalsRegistry' === 'True');
+    const canViewOrganizationsRegistry = ('@ViewBag.CanViewOrganizationsRegistry' === 'True');
+
+    function hasEditContractsRights() {
+        if (!canEditContractsRegistry)
+            alert('Недостаточно прав для изменения реестра');
+        return canEditContractsRegistry;
+    }
+
+    function hasViewAnimalsRights() {
+        if (!canViewAnimalsRegistry)
+            alert("Недостаточно прав для просмотра реестра животных")
+        return canViewAnimalsRegistry;
+    }
+
+    function hasViewOrganizationsRights() {
+        if (!canViewOrganizationsRegistry)
+            alert("Недостаточно прав для просмотра реестра организаций")
+        return canViewOrganizationsRegistry;
+</script>

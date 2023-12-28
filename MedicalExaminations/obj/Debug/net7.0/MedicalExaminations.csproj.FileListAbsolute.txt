@@ -793,7 +793,6 @@ D:\Учеба\ПИС 2\VetClinic\MedicalExaminations\bin\Debug\net7.0\ClosedXML.
 D:\Учеба\ПИС 2\VetClinic\MedicalExaminations\bin\Debug\net7.0\DocumentFormat.OpenXml.dll
 D:\Учеба\ПИС 2\VetClinic\MedicalExaminations\bin\Debug\net7.0\ExcelNumberFormat.dll
 D:\Учеба\ПИС 2\VetClinic\MedicalExaminations\bin\Debug\net7.0\Irony.dll
-D:\Учеба\ПИС 2\VetClinic\MedicalExaminations\bin\Debug\net7.0\Microsoft.Office.Interop.Excel.dll
 D:\Учеба\ПИС 2\VetClinic\MedicalExaminations\bin\Debug\net7.0\SixLabors.Fonts.dll
 D:\Учеба\ПИС 2\VetClinic\MedicalExaminations\bin\Debug\net7.0\System.IO.Packaging.dll
 D:\Учеба\ПИС 2\VetClinic\MedicalExaminations\bin\Debug\net7.0\XLParser.dll
