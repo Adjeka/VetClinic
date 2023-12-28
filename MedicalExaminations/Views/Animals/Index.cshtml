@@ -28,33 +28,26 @@
         <table id="myTable" class="table table-not-bordered table-hover table-sm">
             <thead>
                 <tr>
-                    <th class="colId">Id</th>
-                    <th>Регистрационный номер</th>
+                    <th hidden>Id</th>
                     <th>Населённый пункт</th>
                     <th>Категория животного</th>
                     <th>Пол животного</th>
                     <th>Год рождения</th>
-                    <th>Номер электронного чипа</th>
                     <th>Кличка животного</th>
-                    <th>Фотографии</th>
-                    <th>Особые приметы</th>
-                    <th>Наличие признаков владельца</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td class="colId"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+                @foreach (var animal in Model)
+                {
+                    <tr>
+                        <td hidden>@animal.Id</td>
+                        <td>@animal.Location.Name</td>
+                        <td>@animal.AnimalCategory.Name</td>
+                        <td>@animal.Sex</td>
+                        <td>@animal.BirthYear</td>
+                        <td>@animal.Nickname</td>
+                    </tr>
+                }
             </tbody>
         </table>
     </div>
@@ -92,7 +85,7 @@
             var id = Number(row.find("td").eq(0).html());
 
             if (Number.isInteger(id) && id != 0)
-                window.location.href = `/Organizations/Edit/${id}`;
+                window.location.href = `/Animals/Edit/${id}`;
         });
 
         $("#myTable tbody tr").click(function () {
