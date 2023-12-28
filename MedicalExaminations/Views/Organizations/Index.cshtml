@@ -28,7 +28,7 @@
         <table id="myTable" class="table table-not-bordered table-hover table-sm">
             <thead>
                 <tr>
-                    <th class="colId">Id</th>
+                    <th hidden>Id</th>
                     <th>Наименование</th>
                     <th>ИНН</th>
                     <th>КПП</th>
@@ -41,7 +41,7 @@
                 @foreach (var organization in Model)
                 {
                     <tr>
-                        <td class="colId">@organization.Id</td>
+                        <td hidden>@organization.Id</td>
                         <td>@organization.Name</td>
                         <td>@organization.INN</td>
                         <td>@organization.KPP</td>

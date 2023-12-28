@@ -60,7 +60,12 @@ form {
 }
 
 .form-group {
-    max-height: 59px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.no-flexwrap {
+    flex-wrap: nowrap;
 }
 
 .text-danger {
@@ -71,7 +76,6 @@ form {
 
 .text-danger span {
     position:relative;
-    top:-15px;
     margin-left: 33px;
 }
 
@@ -82,9 +86,22 @@ input, button, select {
 }
 
 input[type="text"],
-input[type="number"] {
+input[type="number"], 
+input[type="file"] {
     width: calc(100% - 13.5em);
     outline: none;
+}
+
+input[type="file"] {
+    padding: 0 0 5px 5px;
+}
+
+input[type="checkbox"] {
+    margin-left: 20px;
+}
+
+.ownerSign {
+    font-size: 24px;
 }
 
 select {
@@ -98,6 +115,7 @@ label {
     float: left;
     width: 10.5em;
     margin-left: 2rem;
+    height: 44px;
 }
 
 hr {
@@ -139,9 +157,11 @@ hr {
     position: relative;
     width: 200px;
     height: 200px;
-    margin: 0 auto;
+    margin: 0 auto 10px auto;
     overflow: hidden;
     border-radius: 100%;
+    border: 1px black solid;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .slider {
@@ -150,7 +170,8 @@ hr {
 }
 
 .slider img {
-    width: 100%;
+    width: 200px;
+    height:200px;
     object-fit: cover;
 }
 
@@ -169,10 +190,12 @@ hr {
 
 .prev-button {
     left: 10px;
+    color: black;
 }
 
 .next-button {
     right: 10px;
+    color: black;
 }
 
 .left-column {
@@ -187,53 +210,53 @@ hr {
 .tableDiv {
     width: 255px;
     font-size: 26px;
-    margin: auto;
+    margin: 25px auto 0 auto;
 }
 
 .table {
     width: 100%;
     background-color: white;
     text-align: center;
-    border-radius: 20px;
+    border-radius: 0 0 20px 20px;
     border-collapse: collapse;
     overflow: hidden;
 }
 
-.table img {
+#plus {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    margin-left: 5px;
+    display: inline-block;
+}
+
+#plus img {
     width: 35px;
     vertical-align: middle;
     border-radius: 100%;
 }
 
-.table #plus {
-    width: 35px;
-    height: 35px;
-    border-radius: 100%;
-    margin-left: 5px;
-}
-
-.table #plus:hover {
+#plus:hover {
     background-color: #E0E0E0;
     box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.5);
 }
 
-.table thead {
+.thead {
     height: 45px;
+    padding-top: 5px;
     border-bottom: 2px solid #5D5D81;
+    background-color: white;
+    border-radius: 20px 20px 0 0;
 }
 
-.table thead span {
-    margin-left: 20px;
-}
-
-.table th {    
+.thead span {
     font-weight: 500;
-    margin-left: 10px;
-    margin-top: 5px;
-    display: flex;
+    margin-left: 20px;
+    padding-top: 10px;
 }
 
 .table tbody {
+    height: 140px;
     max-height: 140px;
     overflow-y: auto;
     display: flex;
@@ -255,4 +278,10 @@ hr {
 
 .table tbody tr:hover {
     background-color: #E0E0E0;
+}
+
+.checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+
 }

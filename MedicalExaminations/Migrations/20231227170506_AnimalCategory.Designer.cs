@@ -3,6 +3,7 @@ using System;
 using MedicalExaminations.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MedicalExaminations.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231227170506_AnimalCategory")]
+    partial class AnimalCategory
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -107,9 +110,9 @@ namespace MedicalExaminations.Migrations
                     b.Property<int>("AnimalId")
                         .HasColumnType("integer");
 
-                    b.Property<byte[]>("PhotoData")
+                    b.Property<string>("FilePath")
                         .IsRequired()
-                        .HasColumnType("bytea");
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 

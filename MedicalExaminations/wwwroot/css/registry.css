@@ -146,7 +146,3 @@ input, img {
 .selected {
     background-color: gray;
 }
-
-.colId {
-    display: none;
-}

@@ -7,7 +7,7 @@ namespace MedicalExaminations.Models
         [Key]
         public int Id { get; set; }
         public int AnimalId { get; set; }
-        public Animal? Animal { get; set; }
-        public string FilePath { get; set; }
+        public Animal Animal { get; set; }
+        public byte[] PhotoData { get; set; }
     }
 }
