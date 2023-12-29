@@ -18,7 +18,7 @@ namespace MedicalExaminations.Controllers
 
         public async Task<IActionResult> Index()
         {
-            ViewBag.CanEditAnimalsRegistry = GlobalConfig.CurrentUser.PermissionManager.CanEditAnimalsRegistry;
+            //ViewBag.CanEditAnimalsRegistry = GlobalConfig.CurrentUser.PermissionManager.CanEditAnimalsRegistry;
             return View(await db.Animals
                 .Include(a => a.Location)
                 .Include(a => a.AnimalCategory)
@@ -79,7 +79,7 @@ namespace MedicalExaminations.Controllers
             ViewBag.OwnerSigns = db.OwnerSigns.ToList();
             if (id != null)
             {
-                Animal? animal = await db.Animals.Include(a => a.AnimalPhotos).Include(a => a.OwnerSigns).FirstOrDefaultAsync(p => p.Id == id);
+                Animal? animal = await db.Animals.Include(a => a.AnimalPhotos).Include(a => a.OwnerSigns).Include(a => a.MedicalExaminations).FirstOrDefaultAsync(p => p.Id == id);
                 if (animal != null) return View(animal);
             }
             return NotFound();
@@ -88,8 +88,9 @@ namespace MedicalExaminations.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(Animal animal, IFormFileCollection animalPhotos, IEnumerable<int> ownerSigns)
         {
-            Animal? animalUpdate = await db.Animals.Include(a => a.AnimalPhotos).Include(a => a.OwnerSigns).FirstOrDefaultAsync(p => p.Id == animal.Id);
-            db.Animals.Update(animalUpdate);
+            db.Animals.Update(animal);
+            Animal? animalUpdate = await db.Animals.Include(a => a.AnimalPhotos).Include(a => a.OwnerSigns).Include(a => a.MedicalExaminations).FirstOrDefaultAsync(p => p.Id == animal.Id);
+            
             if (animalPhotos.Count != 0)
             {
                 var AnimalPhotosList = new List<AnimalPhoto>();
@@ -118,6 +119,7 @@ namespace MedicalExaminations.Controllers
                 }
             }
             animalUpdate.OwnerSigns = OwnerSignsList;
+            db.Animals.Update(animalUpdate);
             await db.SaveChangesAsync();
             return RedirectToAction("Index");
         }
