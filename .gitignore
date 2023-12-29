@@ -80,3 +80,4 @@ _[Ss]cripts
 *.nupkg
 *.ncrunchsolution
 *.dot[Cc]over
+/MedicalExaminations/bin/Debug/net7.0/MedicalExaminations.exe

@@ -9,73 +9,89 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MedicalExaminations
 build_property.RootNamespace = MedicalExaminations
-build_property.ProjectDir = C:\Users\Gemeni\Documents\GitHub\VetClinicFORK\MedicalExaminations\
+build_property.ProjectDir = D:\Учеба\ПИС 2\VetClinic\MedicalExaminations\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Gemeni\Documents\GitHub\VetClinicFORK\MedicalExaminations
+build_property.MSBuildProjectDirectory = D:\Учеба\ПИС 2\VetClinic\MedicalExaminations
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Gemeni/Documents/GitHub/VetClinicFORK/MedicalExaminations/Views/Animals/Create.cshtml]
+[D:/Учеба/ПИС 2/VetClinic/MedicalExaminations/Views/Animals/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5pbWFsc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gemeni/Documents/GitHub/VetClinicFORK/MedicalExaminations/Views/Animals/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5pbWFsc1xFZGl0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Gemeni/Documents/GitHub/VetClinicFORK/MedicalExaminations/Views/Animals/Index.cshtml]
+[D:/Учеба/ПИС 2/VetClinic/MedicalExaminations/Views/Animals/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5pbWFsc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gemeni/Documents/GitHub/VetClinicFORK/MedicalExaminations/Views/Animals/_ViewImports.cshtml]
+[D:/Учеба/ПИС 2/VetClinic/MedicalExaminations/Views/Animals/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5pbWFsc1xfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gemeni/Documents/GitHub/VetClinicFORK/MedicalExaminations/Views/Authorization/Index.cshtml]
+[D:/Учеба/ПИС 2/VetClinic/MedicalExaminations/Views/Authorization/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yaXphdGlvblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gemeni/Documents/GitHub/VetClinicFORK/MedicalExaminations/Views/Contracts/Index.cshtml]
+[D:/Учеба/ПИС 2/VetClinic/MedicalExaminations/Views/Contracts/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udHJhY3RzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gemeni/Documents/GitHub/VetClinicFORK/MedicalExaminations/Views/Mainform/Index.cshtml]
+[D:/Учеба/ПИС 2/VetClinic/MedicalExaminations/Views/Mainform/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpbmZvcm1cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gemeni/Documents/GitHub/VetClinicFORK/MedicalExaminations/Views/Organizations/Create.cshtml]
+[D:/Учеба/ПИС 2/VetClinic/MedicalExaminations/Views/MedicalExaminations/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbEV4YW1pbmF0aW9uc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Учеба/ПИС 2/VetClinic/MedicalExaminations/Views/MedicalExaminations/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbEV4YW1pbmF0aW9uc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Учеба/ПИС 2/VetClinic/MedicalExaminations/Views/MedicalExaminations/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbEV4YW1pbmF0aW9uc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Учеба/ПИС 2/VetClinic/MedicalExaminations/Views/MedicalExaminations/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbEV4YW1pbmF0aW9uc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Учеба/ПИС 2/VetClinic/MedicalExaminations/Views/MedicalExaminations/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbEV4YW1pbmF0aW9uc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Учеба/ПИС 2/VetClinic/MedicalExaminations/Views/Organizations/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JnYW5pemF0aW9uc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gemeni/Documents/GitHub/VetClinicFORK/MedicalExaminations/Views/Organizations/Edit.cshtml]
+[D:/Учеба/ПИС 2/VetClinic/MedicalExaminations/Views/Organizations/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JnYW5pemF0aW9uc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gemeni/Documents/GitHub/VetClinicFORK/MedicalExaminations/Views/Organizations/Index.cshtml]
+[D:/Учеба/ПИС 2/VetClinic/MedicalExaminations/Views/Organizations/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JnYW5pemF0aW9uc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gemeni/Documents/GitHub/VetClinicFORK/MedicalExaminations/Views/Organizations/_ViewImports.cshtml]
+[D:/Учеба/ПИС 2/VetClinic/MedicalExaminations/Views/Organizations/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JnYW5pemF0aW9uc1xfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gemeni/Documents/GitHub/VetClinicFORK/MedicalExaminations/Views/Shared/Error.cshtml]
+[D:/Учеба/ПИС 2/VetClinic/MedicalExaminations/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gemeni/Documents/GitHub/VetClinicFORK/MedicalExaminations/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Учеба/ПИС 2/VetClinic/MedicalExaminations/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gemeni/Documents/GitHub/VetClinicFORK/MedicalExaminations/Views/_ViewImports.cshtml]
+[D:/Учеба/ПИС 2/VetClinic/MedicalExaminations/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gemeni/Documents/GitHub/VetClinicFORK/MedicalExaminations/Views/_ViewStart.cshtml]
+[D:/Учеба/ПИС 2/VetClinic/MedicalExaminations/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gemeni/Documents/GitHub/VetClinicFORK/MedicalExaminations/Views/Shared/_Layout.cshtml]
+[D:/Учеба/ПИС 2/VetClinic/MedicalExaminations/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-8kfrlx24jc
