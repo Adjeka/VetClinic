@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MedicalExaminations.Models
 {
@@ -17,5 +18,7 @@ namespace MedicalExaminations.Models
         //public List<Location> Locations { get; set; }
         public List<ContractLocation> ContractLocations { get; set; }
         public List<MedicalExamination> MedicalExaminations { get; set; }
+        [NotMapped]
+        public string Display { get { return $"{Number} от {SigningDate}"; } }
     }
 }

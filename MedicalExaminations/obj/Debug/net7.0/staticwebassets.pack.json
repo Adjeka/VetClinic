@@ -69,6 +69,10 @@
       "PackagePath": "staticwebassets\\img\\background.png"
     },
     {
+      "Id": "D:\\Учеба\\ПИС 2\\VetClinic\\MedicalExaminations\\wwwroot\\img\\delete.png",
+      "PackagePath": "staticwebassets\\img\\delete.png"
+    },
+    {
       "Id": "D:\\Учеба\\ПИС 2\\VetClinic\\MedicalExaminations\\wwwroot\\img\\edit.png",
       "PackagePath": "staticwebassets\\img\\edit.png"
     },
@@ -99,10 +103,6 @@
     {
       "Id": "D:\\Учеба\\ПИС 2\\VetClinic\\MedicalExaminations\\wwwroot\\img\\sort.png",
       "PackagePath": "staticwebassets\\img\\sort.png"
-    },
-    {
-      "Id": "D:\\Учеба\\ПИС 2\\VetClinic\\MedicalExaminations\\wwwroot\\js\\site.js",
-      "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
       "Id": "D:\\Учеба\\ПИС 2\\VetClinic\\MedicalExaminations\\wwwroot\\lib\\DataTables\\datatables.min.css",

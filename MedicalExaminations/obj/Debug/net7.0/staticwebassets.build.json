@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yVIeaniLwd6Jbv84zSk2wx7onHiMDVk6v6Vaw/Ahg6U=",
+  "Hash": "edcLpWAl944cFZel6pXWw/jIMYU/z50uLD4x1ih2VSc=",
   "Source": "MedicalExaminations",
   "BasePath": "_content/MedicalExaminations",
   "Mode": "Default",
@@ -323,6 +323,23 @@
       "OriginalItemSpec": "wwwroot\\img\\background.png"
     },
     {
+      "Identity": "D:\\Учеба\\ПИС 2\\VetClinic\\MedicalExaminations\\wwwroot\\img\\delete.png",
+      "SourceId": "MedicalExaminations",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Учеба\\ПИС 2\\VetClinic\\MedicalExaminations\\wwwroot\\",
+      "BasePath": "_content/MedicalExaminations",
+      "RelativePath": "img/delete.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\delete.png"
+    },
+    {
       "Identity": "D:\\Учеба\\ПИС 2\\VetClinic\\MedicalExaminations\\wwwroot\\img\\edit.png",
       "SourceId": "MedicalExaminations",
       "SourceType": "Discovered",
@@ -457,23 +474,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\sort.png"
-    },
-    {
-      "Identity": "D:\\Учеба\\ПИС 2\\VetClinic\\MedicalExaminations\\wwwroot\\js\\site.js",
-      "SourceId": "MedicalExaminations",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Учеба\\ПИС 2\\VetClinic\\MedicalExaminations\\wwwroot\\",
-      "BasePath": "_content/MedicalExaminations",
-      "RelativePath": "js/site.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
       "Identity": "D:\\Учеба\\ПИС 2\\VetClinic\\MedicalExaminations\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

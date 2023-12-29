@@ -20,6 +20,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5pbWFsc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Учеба/ПИС 2/VetClinic/MedicalExaminations/Views/Animals/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5pbWFsc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Учеба/ПИС 2/VetClinic/MedicalExaminations/Views/Animals/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5pbWFsc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -44,20 +48,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbEV4YW1pbmF0aW9uc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Учеба/ПИС 2/VetClinic/MedicalExaminations/Views/MedicalExaminations/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbEV4YW1pbmF0aW9uc1xEZWxldGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Учеба/ПИС 2/VetClinic/MedicalExaminations/Views/MedicalExaminations/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbEV4YW1pbmF0aW9uc1xEZXRhaWxzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/Учеба/ПИС 2/VetClinic/MedicalExaminations/Views/MedicalExaminations/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbEV4YW1pbmF0aW9uc1xFZGl0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Учеба/ПИС 2/VetClinic/MedicalExaminations/Views/MedicalExaminations/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbEV4YW1pbmF0aW9uc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Учеба/ПИС 2/VetClinic/MedicalExaminations/Views/Organizations/Create.cshtml]

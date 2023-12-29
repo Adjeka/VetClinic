@@ -1,7 +1,7 @@
 ﻿@model MedicalExaminations.Models.Animal
 
 @{
-    ViewData["Title"] = "ViewAndEdit";
+    ViewData["Title"] = "Просмотр животного";
 }
 
 @section style {
@@ -29,7 +29,7 @@
             <div class="tableDiv">
                 <div class="thead">
                     <span>Медосмотры</span>
-                    <a asp-action="#" asp-controller="#" id="plus"><img src="~/img/plus.png" alt="plus" /></a>
+                    <a asp-action="Create" asp-controller="MedicalExaminations" id="plus" asp-route-id="@Model"><img src="~/img/plus.png" alt="plus" /></a>
                 </div>
                 <table id="myTable" class="table">
                     <thead>

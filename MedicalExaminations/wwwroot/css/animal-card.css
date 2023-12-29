@@ -19,7 +19,6 @@
 body {
     background-color: #BFCDE0;
     font-size: 2rem;
-    overflow : hidden;
 }
 
 .header-label {
@@ -115,7 +114,6 @@ label {
     float: left;
     width: 10.5em;
     margin-left: 2rem;
-    height: 44px;
 }
 
 hr {
