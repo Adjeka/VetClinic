@@ -74,7 +74,7 @@ form {
 }
 
 .text-danger span {
-    position:relative;
+    position: relative;
     margin-left: 33px;
 }
 
@@ -85,7 +85,6 @@ input, button, select {
 }
 
 input[type="text"],
-input[type="number"], 
 input[type="file"] {
     width: calc(100% - 13.5em);
     outline: none;
@@ -281,5 +280,4 @@ hr {
 .checkboxes {
     display: flex;
     flex-wrap: wrap;
-
 }

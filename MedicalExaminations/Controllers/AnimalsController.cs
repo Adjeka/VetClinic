@@ -90,7 +90,6 @@ namespace MedicalExaminations.Controllers
         {
             db.Animals.Update(animal);
             Animal? animalUpdate = await db.Animals.Include(a => a.AnimalPhotos).Include(a => a.OwnerSigns).Include(a => a.MedicalExaminations).FirstOrDefaultAsync(p => p.Id == animal.Id);
-            
             if (animalPhotos.Count != 0)
             {
                 var AnimalPhotosList = new List<AnimalPhoto>();
@@ -101,7 +100,7 @@ namespace MedicalExaminations.Controllers
                         using (var br = new BinaryReader(photo.OpenReadStream()))
                         {
                             var data = br.ReadBytes((int)photo.Length);
-                            var img = new AnimalPhoto { AnimalId = animalUpdate.Id };
+                            var img = new AnimalPhoto { AnimalId = animal.Id };
                             img.PhotoData = data;
                             AnimalPhotosList.Add(img);
                         }
