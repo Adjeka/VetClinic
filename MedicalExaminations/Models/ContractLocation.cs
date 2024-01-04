@@ -11,6 +11,6 @@ namespace MedicalExaminations.Models
         public Location Location { get; set; }
         public int ContractId { get; set; }
         public Contract Contract { get; set; }
-        public int ExaminationCost { get; set; }
+        public double ExaminationCost { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using MedicalExaminations.Models;
+﻿using DocumentFormat.OpenXml.Office2010.Excel;
+using MedicalExaminations.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -16,7 +17,7 @@ namespace MedicalExaminations.Controllers
 
         public async Task<IActionResult> Index()
         {
-            //ViewBag.CanEditContractsRegistry = GlobalConfig.CurrentUser.PermissionManager.CanEditOrganizationsRegistry;
+           ViewBag.CanEditContractsRegistry = GlobalConfig.CurrentUser.PermissionManager.CanEditOrganizationsRegistry;
             return View(await db.Contracts
                 .Include(a => a.Client)
                 .Include(a => a.Executor)
@@ -53,19 +54,32 @@ namespace MedicalExaminations.Controllers
         {
             ViewBag.Clients = new SelectList(db.Organizations.ToList(), "Id", "Name");
             ViewBag.Executors = new SelectList(db.Organizations.ToList(), "Id", "Name");
-            //ViewBag.CanEditContractsRegistry = GlobalConfig.CurrentUser.PermissionManager.CanEditContractsRegistry;
+            ViewBag.Locations = new SelectList(db.Locations.ToList(), "Id", "Name");
+            ViewBag.CanEditContractsRegistry = GlobalConfig.CurrentUser.PermissionManager.CanEditContractsRegistry;
             if (id != null)
             {
-                Contract? contract = await db.Contracts.FirstOrDefaultAsync(p => p.Id == id);
+                Contract? contract = await db.Contracts.Include(c => c.ContractLocations).FirstOrDefaultAsync(p => p.Id == id);
                 if (contract != null) return View(contract);
             }
             return NotFound();
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(Contract contract)
+        public async Task<IActionResult> Edit(Contract contract, List<int> locs, List<string> costs)
         {
             db.Contracts.Update(contract);
+            Contract? contractUpdate = await db.Contracts.Include(c => c.ContractLocations).FirstOrDefaultAsync(p => p.Id == contract.Id);
+            var ContractLocations = new List<ContractLocation>();
+            for (int i = 0; i < locs.Count; i++)
+            {
+                ContractLocation? contractLocation = new ContractLocation();
+                contractLocation.ContractId = contractUpdate.Id;
+                contractLocation.LocationId = locs[i];
+                contractLocation.ExaminationCost = double.Parse(costs[i].Replace('.', ','));
+                ContractLocations.Add(contractLocation);
+            }
+            contractUpdate.ContractLocations = ContractLocations;
+            db.Contracts.Update(contractUpdate);
             await db.SaveChangesAsync();
             return RedirectToAction("Index");
         }

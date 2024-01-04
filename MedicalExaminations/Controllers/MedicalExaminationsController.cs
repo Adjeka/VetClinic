@@ -68,7 +68,6 @@ namespace MedicalExaminations.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(MedicalExamination medicalExamination)
         {
-            //medicalExamination = db.MedicalExaminations.Include(e => e.Animal).Include(e => e.VetClinic).Include(e => e.Contract).FirstOrDefault(e => e.Id == medicalExamination.Id);
             db.MedicalExaminations.Update(medicalExamination);
             await db.SaveChangesAsync();
             return RedirectToAction("Edit", "Animals", medicalExamination.AnimalId);

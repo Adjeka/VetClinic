@@ -18,6 +18,6 @@ namespace MedicalExaminations.Models
         public List<ContractLocation> ContractLocations { get; set; }
         public List<MedicalExamination> MedicalExaminations { get; set; }
         [NotMapped]
-        public string Display { get { return $"{Number} от {SigningDate}"; } }
+        public string Display { get { return $"№{Number} от {SigningDate}"; } }
     }
 }

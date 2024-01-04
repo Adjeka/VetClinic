@@ -161,12 +161,6 @@ h3 {
     flex-direction: column;
 }
 
-#LocationsWithCost input[type="number"] {
-    width: calc(100% - 336px - 50px);
-    margin-left: 15px;
-    outline: none;
-}
-
 #LocationsWithCost select {
     width: 336px;
     padding: 0;

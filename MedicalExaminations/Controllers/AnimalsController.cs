@@ -18,7 +18,7 @@ namespace MedicalExaminations.Controllers
 
         public async Task<IActionResult> Index()
         {
-            //ViewBag.CanEditAnimalsRegistry = GlobalConfig.CurrentUser.PermissionManager.CanEditAnimalsRegistry;
+            ViewBag.CanEditAnimalsRegistry = GlobalConfig.CurrentUser.PermissionManager.CanEditAnimalsRegistry;
             return View(await db.Animals
                 .Include(a => a.Location)
                 .Include(a => a.AnimalCategory)

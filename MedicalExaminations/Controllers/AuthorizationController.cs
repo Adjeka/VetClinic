@@ -13,6 +13,7 @@ namespace MedicalExaminations.Controllers
         //{
         //    _logger = logger;
         //}
+
         public AuthorizationController(AppDbContext context) => this.context = context;
 
         public IActionResult Index()
